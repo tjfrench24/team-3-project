@@ -9,3 +9,9 @@ Top 3 Commits:
 - https://github.com/tjfrench24/team-3-project/commit/0fdc194f859f8b1db764ccfb2894aad84731e529
 - Commit 3: Drafted initial problem statement in the problem.md file.
 - https://github.com/tjfrench24/team-3-project/commit/63a10eede54791d1c9a3a3b85688af106557b8c7
+
+## Alan de Mersseman - Task Manager
+- Role: Responsible for organizing and tracking team tasks.
+Top 3 Commits
+- Commit 1: Assisted in idea generation for the website design
+- Commit 2: Assisted in the creation of UI-diagrams for calendar entry and weight loss graph website pages
