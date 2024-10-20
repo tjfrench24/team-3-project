@@ -6,7 +6,7 @@
 
 To navigate to the **Calendar Entry Page** one simply double clicks the day of the specific date entry they wish to view/edit.
 
-![Calendar Entry UI](Calendar Entry.png)
+![Calendar Entry UI]([Calendar Entry.png](https://github.com/tjfrench24/team-3-project/blob/main/team/m2/Calendar%20Entry.png))
 
 On this screen users input their daily workout routine as well as calories consumed.
 
