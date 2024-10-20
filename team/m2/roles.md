@@ -13,5 +13,6 @@ Top 3 Commits:
 ## Alan de Mersseman - Task Manager
 - Role: Responsible for organizing and tracking team tasks.
 Top 3 Commits
-- Commit 1: Assisted in idea generation for the website design
-- Commit 2: Assisted in the creation of UI-diagrams for calendar entry and weight loss graph website pages
+- Commit 1: Assisted in effort to complete lab
+- Commit 2: Assisted in idea generation for the website design
+- Commit 3: Assisted in the creation of UI-diagrams for calendar entry and weight loss graph website pages
