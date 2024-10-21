@@ -1,4 +1,4 @@
-# Contribution Log for Timothy French
+# Contribution Log for Harleigh Kyle K. Chua
 
 ## October 20, 2024
 
