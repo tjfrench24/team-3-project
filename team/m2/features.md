@@ -12,7 +12,7 @@ This feature provides a visual representation of the user's fitness progress ove
 **Assigned To**: Kyle
 
 ## User Data Collection
-This feature collects essential data from users such as name, age, weight, height, exercise capacity, exercise frequency, BMI (optional), and training goals. Gathering this data is crucial for tailoring personalized workout and diet plans, enabling the app to provide specific and relevant recommendations to each user based on their unique profile.
+This feature collects essential data from users such as name, age, weight, height, exercise capacity, exercise frequency, BMI, and training goals. Gathering this data is crucial for tailoring personalized workout and diet plans, enabling the app to provide specific and relevant recommendations to each user based on their unique profile.
 
 **Assigned To**: Tim
 
@@ -40,3 +40,18 @@ A secure login page that allows users to access their personalized fitness dashb
 This feature integrates external APIs to generate varied and effective workout tips. It enriches the user's fitness journey by providing access to a wide range of exercise routines and fitness advice, helping users stay motivated and informed.
 
 **Assigned To**: Rishabh
+
+## Community and Social Sharing:
+This feature allows users to share their progress, workout routines, and achievements with a community within the app for motivation and accountability.
+
+**Assigned To**: Rishabh
+
+## Multi-Device Access
+Users can access their fitness data and plans across multiple devices such as mobiles, laptops, smartwatches, etc. Which ensures seamless continuity in their fitness journey.
+
+**Assigned To**: Tim
+
+## Personalized Goal Setting
+Users can set specific, measurable, and time bound fitness goals, such as weight loss, muscle gain, or improved cardiovascular endurance. The app will then generate a customized plan to help the user achieve their objectives.
+
+**Assigned To**: Megan
