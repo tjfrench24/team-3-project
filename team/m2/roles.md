@@ -7,7 +7,7 @@ Top 3 Commits:
 - Example of one file created (couldn't get link to commit for creating folders): https://github.com/tjfrench24/team-3-project/commit/e1b068f5a4c25ed7061a08001cce5f0b34b96966
 - Commit 2: Formatted text for roles.md file and my section to provide an example for other team members.
 - https://github.com/tjfrench24/team-3-project/commit/0fdc194f859f8b1db764ccfb2894aad84731e529
-- Commit 3: Drafted initial problem statement in the problem.md file.
+- Commit 3: Drafted initial problem statement in the problem.md file. The commit link is to the initial draft. However, I made some small revisions, specifically in the "Key Features" section, after further discussion with team members. 
 - https://github.com/tjfrench24/team-3-project/commit/63a10eede54791d1c9a3a3b85688af106557b8c7
 
 ## Alan de Mersseman - Task Manager
