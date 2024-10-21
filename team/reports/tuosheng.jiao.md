@@ -1,4 +1,4 @@
-##Contribution Log for Tuosheng Jiao
+## Contribution Log for Tuosheng Jiao
 
 ### October 21, 2024
 - **Task**: Drafted the initial version of the `data.md` file.
