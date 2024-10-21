@@ -18,8 +18,9 @@ Top 3 Commits
 - Commit 3: Assisted in the creation of UI-diagrams for calendar entry and weight loss graph website pages
 
 ## Rishabh Devnani - Quality Control
-- Role: Responsible for making sure everything written or done by team members is up to the standards we need
-Top 3 Commits
+- Role: Responsible for making sure everything written or done by team members is up to the standards we need.
+
+Top 3 Commits:
 - Commit 1: Suggested, proofread and added features of the project to the features.md file to ensure what we need in our project.
 - Commit 2: Made sure ui-diagrams.md aligns with the features we discussed and wrote about.
 - Commit 3: Final check of all files before submission to ensure quality and detailed description about our project.
