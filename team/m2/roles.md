@@ -24,3 +24,11 @@ Top 3 Commits:
 - Commit 1: Suggested, proofread and added features of the project to the features.md file to ensure what we need in our project.
 - Commit 2: Made sure ui-diagrams.md aligns with the features we discussed and wrote about.
 - Commit 3: Final check of all files before submission to ensure quality and detailed description about our project.
+
+## Megan Greene - Notetaker
+- Role: Responsible for taking notes during meetings and making sure anyone who wasn't available knows everything that was discussed. Responsible with communicating with the group about anything they missed. 
+
+Top 3 Commits:
+- Commit 1: Filled out the form during the previous lab, taking everyone's information and ideas and fill everything out
+- Commit 2: Took and distributed notes from our first official meeting outside of class about features and tasks
+- Commit 3: Filled out the users.md file with the targeted users, user needs, and why the users are important
