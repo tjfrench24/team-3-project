@@ -13,9 +13,10 @@ Top 3 Commits:
 ## Alan de Mersseman - Task Manager
 - Role: Responsible for organizing and tracking team tasks.
 Top 3 Commits
-- Commit 1: Assisted in effort to complete lab
-- Commit 2: Assisted in idea generation for the website design
-- Commit 3: Assisted in the creation of UI-diagrams for calendar entry and weight loss graph website pages
+- Commit 1: Assisted in effort to complete previous lab
+- Commit 2: Joined in idea generation for the website design and page layout
+- Commit 3: created UI-diagrams for calendar entry and weight loss graph website pages
+- https://github.com/tjfrench24/team-3-project
 
 ## Rishabh Devnani - Quality Control
 - Role: Responsible for making sure everything written or done by team members is up to the standards we need.
