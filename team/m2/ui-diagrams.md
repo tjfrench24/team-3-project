@@ -1,6 +1,12 @@
 # UI Diagrams
 
 ## Calendar Page
+This is the main home page of the application. 
+
+<img width="739" alt="Screenshot 2024-10-23 at 11 33 58 AM" src="https://github.com/user-attachments/assets/ecc92a86-4bf7-4d63-a78b-e129d1953b6a">
+
+**UseCase**:
+Here the user can see a summary of their adherence to their fitness program for the current month. 
 
 ## Calendar Entry Page
 
@@ -23,3 +29,4 @@ On this screen users can visualize their weight and corresponding calorie intake
 **Use Case**:
 
 This page allows the user to visualize their progress based on entered data points. This allows a user to visualize their progress across time.
+
