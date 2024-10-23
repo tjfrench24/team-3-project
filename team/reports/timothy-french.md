@@ -8,6 +8,12 @@
 
 ## October 17, 2024
 
-- Task: Task: Drafted the initial problem statement in the problem.md file. 
+- Task: Drafted the initial problem statement in the problem.md file. 
 - Details: Created and structured file, wrote the 'problem description', 'proposed solution', and 'why this matters'. The link in this report is to the initial draft. I made some small revisions in the final product, mostly in the "Key Features" section, after further discussion with team members. 
 - Link: https://github.com/tjfrench24/team-3-project/commit/63a10eede54791d1c9a3a3b85688af106557b8c7 
+
+## October 21, 2024
+
+- Task: Revise problem statement in problem.md file.
+- Details: Made some revisions to problem, mostly in the "Key Features" section, after further discussion with team members.
+- Link: https://github.com/tjfrench24/team-3-project/commit/808000c0d0afed2dd513506b7650f7c6456b3b2b 
