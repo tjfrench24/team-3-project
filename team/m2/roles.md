@@ -33,3 +33,10 @@ Top 3 Commits:
 - Commit 1: Filled out the form during the previous lab, taking everyone's information and ideas and fill everything out
 - Commit 2: Took and distributed notes from our first official meeting outside of class about features and tasks
 - Commit 3: Filled out the users.md file with the targeted users, user needs, and why the users are important
+
+## Tuosheng Jiao - Architects
+- **Role**: Responsible for the planning of the overall technical implementation of the project, ensuring that each feature is developed in line with the design expectations and correctly solves the defined problems.
+- **Top 3 Commits**:
+  1. [Commit 1]:Drafted the basic flow of the entire project, what needed user input and what functionality was ultimately implemented
+  2. [Commit 2](https://github.com/tjfrench24/team-3-project/blob/main/team/m2/data.md): Drafted the initial version of the `data.md` file, outlining the core data types and attributes for the project.
+  3. [Commit 3]: Check the technical details of the feature implementation in features.md to ensure that it is feasible and logically correct.
