@@ -40,3 +40,9 @@ Top 3 Commits:
   1. [Commit 1]:Drafted the basic flow of the entire project, what needed user input and what functionality was ultimately implemented
   2. [Commit 2](https://github.com/tjfrench24/team-3-project/blob/main/team/m2/data.md): Drafted the initial version of the `data.md` file, outlining the core data types and attributes for the project.
   3. [Commit 3]: Check the technical details of the feature implementation in features.md to ensure that it is feasible and logically correct.
+
+## Elizabeth Halpern - 
+- **Role**: Responsible for the completion of tasks as determined by the group. 
+- Commit 1: Created the repository for the previous lab, inviting users to the repo and helping ensure access/completion.
+- Commit 2: Discussed and planned out UI elements with Alan at meeting. 
+- Commit 3: Created the UI diagram for the calendar page.
