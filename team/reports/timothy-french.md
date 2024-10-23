@@ -14,6 +14,6 @@
 
 ## October 21, 2024
 
-- Task: Revise problem statement in problem.md file.
-- Details: Made some revisions to problem, mostly in the "Key Features" section, after further discussion with team members.
+- Task: Revised problem statement in problem.md file.
+- Details: Made some revisions to problem statement, mostly in the "Key Features" section, after further discussion with team members.
 - Link: https://github.com/tjfrench24/team-3-project/commit/808000c0d0afed2dd513506b7650f7c6456b3b2b 
