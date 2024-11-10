@@ -22,8 +22,7 @@
   },
   "contributors": [],
   "scripts": {
-    "dev": "",
-    "test": ""
+    "start-server": "http-server ./src -p 3000"
   },
   "dependencies": {
     "http-server": "^14.1.1"
