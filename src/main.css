@@ -1,0 +1,19 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    grid-gap: 5px;
+    width: 500px;
+    height: 500px;
+  }
+  
+  .grid-item {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    color: blacks;
+  }
+  
+  .grid-item:hover {
+    background-color: red;
+    color: white;
+  }
