@@ -141,3 +141,34 @@ p {
   color: #555;
   margin-bottom: 20px;
 }
+/*workout styles */
+.back-btn {
+  padding: 5px 10px;                      
+  margin-bottom: 20px;                    
+  cursor: pointer;                        
+}
+
+.workout-item {
+  border: 1px solid black;                 
+  padding: 15px;                          
+  margin-bottom: 15px;                    
+}
+
+.workout-item button {
+  padding: 5px 10px;                      
+  cursor: pointer;                       
+}
+
+.completed {
+  background-color: #e6ffe6;              
+}
+.calories{
+  margin-top: auto;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+}
+.calories-count{
+  font-weight: bold;
+  color: #4CAF50;
+}
