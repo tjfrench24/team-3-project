@@ -74,14 +74,70 @@ img:hover {
     height: 500px;
   }
   
-  .grid-item {
-    height: 50px;
-    width: 50px;
-    background-color: white;
-    color: black;
-  }
-  
-  .grid-item:hover {
-    background-color: red;
-    color: white;
-  }
+.grid-item {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  color: black;
+}
+
+.grid-item:hover {
+  background-color: red;
+  color: white;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#loginForm input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#loginForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#loginForm button:hover {
+  background-color: #0056b3;
+}
+
+#loginView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
