@@ -104,6 +104,45 @@ img:hover {
   font-size: 1.2rem;
   font-weight: bold;
 }
+#calendarView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-item.current-date {
+  /* Change color as you see fit */
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+#calendarHeader {
+  /* Adjust as needed */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+}
+
+#calendarHeader button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#calendarHeader button:hover {
+  background-color: #0056b3;
+}
+
+#calendarHeader #monthYearDisplay {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
 .grid-container {
   display: grid;
