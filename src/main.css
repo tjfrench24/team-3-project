@@ -65,15 +65,65 @@ img:hover {
 }
 
 /* calendar styling*/
+#calendarView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-item.current-date {
+  /* Change color as you see fit */
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+#calendarHeader {
+  /* Adjust as needed */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+}
+
+#calendarHeader button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#calendarHeader button:hover {
+  background-color: #0056b3;
+}
+
+#calendarHeader #monthYearDisplay {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(7, auto);
-    grid-gap: 5px;
-    width: 500px;
-    height: 500px;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0px;
+  /* Adjust the gap between cells */
+  border: 2px solid #000;
+  /* Adjust the border thickness and color */
+  max-width: 605px;
+  /* Adjust as needed */
+}
+
+.grid-container div {
+  border: 1px solid #000;
+  /* Adjust the cell border thickness and color */
+  padding: 17px;
+  /* Adjust the padding as needed */
+  text-align: center;
+}
+
 .grid-item {
   height: 50px;
   width: 50px;
