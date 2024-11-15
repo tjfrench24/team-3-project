@@ -1,68 +1,69 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>HealthHub</title>
-        <link rel="stylesheet" href="styles/base.css">
-        <link rel="stylesheet" href="styles/nav.css">
-        <link rel="stylesheet" href="styles/views.css">
-        <link rel="stylesheet" href="styles/calendar.css">
-        <link rel="stylesheet" href="styles/login.css">
-        <link rel="stylesheet" href="styles/workout.css">
-        <script type="module" src="main.js"></script>
-    </head>
-    <body>
-        <nav>
-            <button id="login">Log in</button>
-            <button id="home">Home</button>
-            <button id="calendar">Calendar</button>
-            <button id="graph">Progress Graph</button>
-            <button id="profile">Fitness Profile</button>
-        </nav>
-
-        <div id="views">
-            <div id="loginView" class="view">
-                <h1>Welcome to HealthHub</h1>
-                <p>Log in to get started on your fitness journey!</p>
-                <form id="loginForm">
-                    <input type="text" id="username" placeholder="Username" required />
-                    <input type="password" id="password" placeholder="Password" required />
-                    <button type="submit">Log In</button>
-                </form>
-            </div>                      
-            <div id="homeView" class="view">
-                <h1>Fitness Home</h1>
-                <p>Welcome to your home dashboard.</p>
-            </div>
-            <div id="calendarView" class="view">
-                <h1>Calendar</h1>
-                <p>Track your workouts, meals, and goal deadlines.</p>
-                 <!--This is where the calendar days should be implemented-->
-                 <div id="calendarHeader"> <button id="prevMonth">Previous</button> <span id="monthYearDisplay"></span> <button id="nextMonth">Next</button></div>
-                 <div class="grid-container" id="theGrid"></div>
-            </div>
-            <div id="graphView" class="view">
-                <h1>Progress Graph</h1>
-                <p>Track your progress visually to see how far you've come!</p>
-                <!--This is where all the progress stuff should be implemented-->
-            </div>
-            <div id="profileView" class="view">
-                <h1>Fitness Profile</h1>
-                <p>Your fitness data and current goals.</p>
-            </div>
-            <div id = "workoutView" class="view">
-                <div class = "container">
-                    <div class="header">
-                        <h1>Exercise plan</h1>
-                        <div id="selected-date"></div>
-                    </div>
-                </div>
-                <div id="workout-list"></div>
-                <div class="calories">
-                    <p>Total consume: <span id="calories-count">0</span> calories</p>
-                </div>
-            </div>
+  <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>HealthHub</title>
+      <link rel="stylesheet" href="styles/base.css">
+      <link rel="stylesheet" href="styles/nav.css">
+      <link rel="stylesheet" href="styles/views.css">
+      <link rel="stylesheet" href="styles/calendar.css">
+      <link rel="stylesheet" href="styles/login.css">
+      <link rel="stylesheet" href="styles/workout.css">
+      <link rel="stylesheet" href="styles/forms.css">
+      <script type="module" src="main.js"></script>
+  </head>
+  <body>
+    <nav>
+      <button id="login">Log in</button>
+      <button id="home">Home</button>
+      <button id="calendar">Calendar</button>
+      <button id="graph">Progress Graph</button>
+      <button id="profile">Fitness Profile</button>
+    </nav>
+      <div id="views">
+        <div id="loginView" class="view">
+          <h1>Welcome to HealthHub</h1>
+          <p>Log in to get started on your fitness journey!</p>
+          <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <button type="submit">Log In</button>
+          </form>
+        </div>                      
+        <div id="homeView" class="view">
+          <h1>Fitness Home</h1>
+          <p>Welcome to your home dashboard.</p>
         </div>
-    </body>
+        <div id="calendarView" class="view">
+          <h1>Calendar</h1>
+          <p>Track your workouts, meals, and goal deadlines.</p>
+            <!--This is where the calendar days should be implemented-->
+            <div id="calendarHeader"> <button id="prevMonth">Previous</button> <span id="monthYearDisplay"></span> <button id="nextMonth">Next</button></div>
+            <div class="grid-container" id="theGrid"></div>
+        </div>
+        <div id="graphView" class="view">
+          <h1>Progress Graph</h1>
+          <p>Track your progress visually to see how far you've come!</p>
+          <!--This is where all the progress stuff should be implemented-->
+        </div>
+        <div id="profileView" class="view">
+          <h1>Fitness Profile</h1>
+          <p>Your fitness data and current goals.</p>
+        </div>
+        <div id = "workoutView" class="view">
+          <div class = "container">
+            <div class="header">
+              <h1>Exercise plan</h1>
+                  <div id="selected-date"></div>
+            </div>
+          </div>
+        <div id="workout-list"></div>
+          <div class="calories">
+            <p>Total consume: <span id="calories-count">0</span> calories</p>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>
