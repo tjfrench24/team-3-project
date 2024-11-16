@@ -1,6 +1,5 @@
 import { navigate } from "./scripts/navigation.js";
-import { buildCalendar } from "./scripts/calendar.js";
-import { initializeWorkouts, toggleComplete } from "./scripts/workout.js";
+import { addTodayWorkout, buildCalendar } from "./scripts/calendar.js";
 
 let currentDate = new Date();
 
@@ -45,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     buildCalendar(currentDate);
   });
 
-  window.toggleComplete = toggleComplete;
-
+  addTodayWorkout()
   navigate("loginView");
 });
