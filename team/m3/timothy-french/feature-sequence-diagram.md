@@ -16,8 +16,8 @@ sequenceDiagram
     
     User->>Fitness Profile Page: Click on 'Fitness Profile' button to navigate to the page
     profile.js->>Fitness Profile Repository Service: calls loadFitnessProfileFromDB()
+
     User->>HTML: user enters their information into each of the fields described above from the form in HTML file
-    
     User->>HTML: clicks 'Save Profile' Button
     HTML->>EventHub: saveProfileClicked event
     EventHub->>profile.js: listener for Save Profile button
