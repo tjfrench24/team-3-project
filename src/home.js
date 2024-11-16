@@ -1,6 +1,6 @@
 import { navigate } from "./scripts/navigation.js";
 
-// Mock data - In a real application, this would come from a backend
+// Mock data - This would come from a backend
 const mockData = {
   todaysWorkout: {
     completed: 2,
@@ -93,7 +93,6 @@ export function initHomeView() {
   `;
 }
 
-// Add event listeners for quick action buttons
 document.addEventListener('DOMContentLoaded', () => {
   initHomeView();
 });
