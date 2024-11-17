@@ -14,3 +14,8 @@
 - **Task**: Created the feature-sequence-diagram documentation for exercise plan
 - **Details**: Created and modified the feature-sequence-diagram for exercise plan, which describes the user, date, and flowchart of the exercise plan.
 - **Link to Commit**: [Commit on feature-sequence-diagram](https://github.com/tjfrench24/team-3-project/blob/main/team/m3/tuosheng-jiao/feature-sequence-diagram.md)
+
+### November 16, 2024
+- **Task**: Modified the exercise plan page to properly interact with the updated calendar.
+- **Details**: Because my teammate updated and upgraded the calendar page, and then I updated my code to enable it to successfully interact with the calendar page.
+- **Link to Commit**: [Commit on exercise plan](https://github.com/tjfrench24/team-3-project/commit/b8df957dcd92158d1a53921c80cbd7477c77355c)
