@@ -48,7 +48,7 @@
 - Links:
 - Original: https://github.com/tjfrench24/team-3-project/commit/271446e4b477b242c7fc8e813d3ba1006199f035
 - Revised profile.js: https://github.com/tjfrench24/team-3-project/commit/85a5c2794955883f21b8f90b291497e4529fa82e 
-- This feature is not entirely complete. I spent a lot of my time on Milestone 3 creating this feature, but I could not figure out why the saved profile information does not render correctly when the information is saved. I spent a lot of time and effort trying to figure out how to fix this problem, but was unable to before the deadline. I could try to fix this before starting my part of the next milestone. 
+- This feature is not entirely complete. I spent a lot of my time on Milestone 3 creating this feature, writing a decent amount of code with a lot of working parts, but I could not figure out why the saved profile information does not render correctly when the information is saved. I spent a lot of time and effort trying to figure out how to fix this problem, but was unable to before the deadline. I could try to fix this before starting my part of the next milestone. 
 
 ## November 17, 2024
 
