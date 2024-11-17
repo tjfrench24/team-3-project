@@ -11,27 +11,6 @@ This feature provides a visual representation of the user's fitness progress ove
 
 **Assigned To**: Kyle
 
-## Fitness Profile Page 
-**Description**: This feature collects essential data from users such as height, weight, weight-lifting level, cardio level, and the user's fitness goals. Gathering this data is crucial for tailoring personalized workout and diet plans, enabling the app to provide specific and relevant recommendations to each user based on their unique profile. Users are able to update their profile and goals as they make progress in their fitness journey. When the page is loaded, data is retrieved from IndexedDB and displayed on the page if the user has already saved their profile in a previous session. If not, when the user enters their information and presses the "Save Profile" button, the inputs are saved in IndexedDB and retrieved to be displayed. 
-
-**Points**: 4
-
-**Team Member**: Tim
-
-## Buttons and Pages of Application 
-**Description**: Added and styled buttons that will be clicked to change pages in the application. Also added home page and fitness profile page to application for a more well-rounded application.
-
-**Points**: 1
-
-**Team Member**: Tim
-
-## Applicaton Navigation 
-**Description**: Provides way for user to nagivate throughout the app. This feature starts the application at the login page. Then, the user can click the Home, Calendar, Progress Graph, and Fitness Profile buttons to navigate throughout the application. This also allows the correct information to be rendered when each page is loaded. (This feature does not include the code to require login and direct you to the home page after. That is a separate feature). 
-
-**Points**: 2
-
-**Team Member**: Tim
-
 ## Basal Metabolism Calculator
 This feature calculates the user's basal metabolism rate (BMR) by considering their age, weight, height, and exercise frequency. Understanding the BMR helps in determining the daily calorie requirements for the user, which is foundational for creating effective diet and exercise plans tailored to their fitness goals.
 
