@@ -5,6 +5,7 @@ import { initializeWorkouts, toggleComplete } from "./scripts/workout.js";
 let currentDate = new Date();
 
 document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll("nav button");
   document
     .getElementById("login")
     .addEventListener("click", () => navigate("loginView"));
@@ -28,6 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
       if (username && password) {
+        buttons.forEach((b) => { //enables each button if user has logged in
+          if(b.id !== "login") b.disabled = false;
+        });
         alert(`Welcome, ${username}!`);
         navigate("homeView");
       } else {
