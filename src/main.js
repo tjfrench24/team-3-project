@@ -6,6 +6,10 @@ let currentDate = new Date();
 
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll("nav button");
+  buttons.forEach((b) => { 
+    if(b.id === "login") b.disabled = false;
+  });
+
   document
     .getElementById("login")
     .addEventListener("click", () => navigate("loginView"));
@@ -31,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (username && password) {
         buttons.forEach((b) => { //enables each button if user has logged in
           if(b.id !== "login") b.disabled = false;
+          if(b.id === "login") b.disabled = true;
         });
         alert(`Welcome, ${username}!`);
         navigate("homeView");
