@@ -1,0 +1,45 @@
+#profileView h1 {
+    color: #2c3e50;
+    font-size: 2em;
+}
+  
+#profileView form {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+}
+  
+#profileView input, #profileView select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+  
+#profileView button {
+    background-color: #0a6fb3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+}
+
+#saveProfileButton {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#saveProfileButton {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+#saveProfileButton:hover {
+    background-color: #0056b3;
+}
