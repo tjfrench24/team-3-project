@@ -45,7 +45,9 @@
 
 - Task: Fitness Profile Page 
 - Details: This feature collects essential data from users such as height, weight, weight-lifting level, cardio level, and the user's fitness goals. Gathering this data is crucial for tailoring personalized workout and diet plans, enabling the app to provide specific and relevant recommendations to each user based on their unique profile. Users are able to update their profile and goals as they make progress in their fitness journey. When the page is loaded, data is retrieved from IndexedDB and displayed on the page if the user has already saved their profile in a previous session. If not, when the user enters their information and presses the "Save Profile" button, the inputs are saved in IndexedDB and retrieved to be displayed.
-- Link: https://github.com/tjfrench24/team-3-project/commit/271446e4b477b242c7fc8e813d3ba1006199f035
+- Links:
+- Original: https://github.com/tjfrench24/team-3-project/commit/271446e4b477b242c7fc8e813d3ba1006199f035
+- Revised profile.js: https://github.com/tjfrench24/team-3-project/commit/85a5c2794955883f21b8f90b291497e4529fa82e 
 - This feature is not entirely complete. I spent a lot of my time on Milestone 3 creating this feature, but I could not figure out why the saved profile information does not render correctly when the information is saved. I spent a lot of time and effort trying to figure out how to fix this problem, but was unable to before the deadline. I could try to fix this before starting my part of the next milestone. 
 
 ## November 17, 2024
