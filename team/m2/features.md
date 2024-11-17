@@ -16,7 +16,7 @@ This feature provides a visual representation of the user's fitness progress ove
 
 **Points**: 4
 
-**Point Justification**: I found this feature very challenging to implement. However, this feature is not entirely complete. I spent a lot of my time on Milestone 3 creating this feature, but I could not figure out why the saved profile information does not render correctly when the information is saved. I spent a lot of time and effort trying to figure out how to fix this problem, but was unable to before the deadline. I could try to fix this before starting my part of the next milestone. 
+**Point Justification**: I found this feature very challenging to implement. However, this feature is not entirely complete. I spent a lot of my time on Milestone 3 creating this feature, writing a decent amount of code with a lot of working parts, but I could not figure out why the saved profile information does not render correctly when the information is saved. I spent a lot of time and effort trying to figure out how to fix this problem, but was unable to before the deadline. I could try to fix this before starting my part of the next milestone. 
 
 **Team Member**: Tim
 
@@ -66,8 +66,6 @@ This feature allows users to share their progress, workout routines, and achieve
 
 ## Multi-Device Access
 Users can access their fitness data and plans across multiple devices such as mobiles, laptops, smartwatches, etc. Which ensures seamless continuity in their fitness journey.
-
-**Assigned To**: Tim
 
 ## Personalized Goal Setting
 Users can set specific, measurable, and time bound fitness goals, such as weight loss, muscle gain, or improved cardiovascular endurance. The app will then generate a customized plan to help the user achieve their objectives.
