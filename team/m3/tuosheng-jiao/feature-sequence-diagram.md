@@ -1,7 +1,7 @@
 # Workout recommendation Feature Sequence Diagram
 
 ## Feature Description
-This feature helps users to see their training programs and recommended exercises. And it contains, the movements trained, the number of sets and a brief description of the movements trained. Each training movement has a calorie consumption, and when the user finishes a movement, he can click finish, and then he can see the total consumption of today's exercise.
+This feature helps users to see their training programs and recommended exercises. And it contains, the movements trained, the number of sets and a brief description of the movements trained. Each training movement has a calorie consumption, and when the user finishes a movement, he can click finish, and then he can see the total consumption of today's exercise.But right now it's a beginner's version, and it's not set up to provide the logic correctly. So now when clicking on today's date, a training program with preset values appears
 
 ## Sequence Diagram
 ```mermaid

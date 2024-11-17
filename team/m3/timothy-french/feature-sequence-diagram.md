@@ -9,7 +9,6 @@ sequenceDiagram
    actor User
     participant Fitness Profile Page 
     participant HTML
-    participant main.js
     participant profile.js
     participant Fitness Profile Repository Service
     participant EventHub
@@ -25,5 +24,4 @@ sequenceDiagram
     profile.js->>HTML: get user inputs from form 
     profile.js->>Fitness Profile Repository Service: call saveFitnessProfile(profileData)
     Fitness Profile Repository Service ->> profile.js: call loadFitnessProfileFromDB()
-    profile.js->>main.js: load profile data
-    main.js->>HTML: display profile data to user
+    profile.js->>HTML: display profile data to user
