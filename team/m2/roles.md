@@ -18,7 +18,7 @@ Top 3 Commits
 - Commit 2: Made the initial rough draft for the front end of the calendar tracking page
 - https://github.com/tjfrench24/team-3-project/commit/8c0c0b47b4299415e0ddd8b70ca016fe84e08be0
 - Commit 3: Created feature sequence Diagram for the Calendar Page
-- 
+- https://github.com/tjfrench24/team-3-project/pull/26/commits/7ab1c109b98703397eea3972c2f8f640c43795a5
 
 ## Rishabh Devnani - Quality Control
 - Role: Responsible for making sure everything written or done by team members is up to the standards we need.

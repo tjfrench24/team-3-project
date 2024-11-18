@@ -20,4 +20,4 @@ Filled out stand-up meeting form #4 because Notetaker was absent
 
 ## novermber 17, 2024
 - Task: Created feature sequence diagram for Workout Calendar page
-- Link: 
+- Link: https://github.com/tjfrench24/team-3-project/pull/26/commits/7ab1c109b98703397eea3972c2f8f640c43795a5
