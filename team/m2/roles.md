@@ -72,3 +72,10 @@ Top 3 Commits:
 - Commit 1: Created the repository for the previous lab, inviting users to the repo and helping ensure access/completion.
 - Commit 2: Discussed and planned out UI elements with Alan at meeting. 
 - Commit 3: Created the UI diagram for the calendar page.
+
+
+## Harleigh Kyle K. Chua - Coder
+**Top 3 Commits**:
+  - [Commit 1]: Compiled and documented features based on notes and meetings to outline the project's scope and individual responsibilities. Created features.md to consolidate this information.
+  - [Commit 2]: Enhanced and refined the Calendar feature, ensuring accurate and user-friendly navigation and date highlighting.
+  - [Commit 3]: Implemented the Progress Graph feature. Updated roles.md and features.md to reflect recent changes and feature additions.
