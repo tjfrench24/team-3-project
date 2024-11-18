@@ -7,6 +7,16 @@ import { addTodayWorkout } from "./scripts/calendar.js";
 let currentDate = new Date();
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  const buttons = document.querySelectorAll("nav button");
+  function toggleButtons(enabled) {
+    buttons.forEach((b) => { 
+      if(b.id !== "login") b.disabled = enabled;
+      if(b.id === "login") b.disabled = !enabled;
+    });
+  }
+  toggleButtons(true);
+
     initHomeView();
     document
         .getElementById("login")
@@ -26,6 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document
         .getElementById("profile")
         .addEventListener("click", () => navigate("profileView"));
+    document
+    .getElementById("logout")
+    .addEventListener("click", () => {
+      navigate("loginView");
+      toggleButtons(true);
+      document.getElementById("username").value = '';
+      document.getElementById("password").value = '';
+    });
 
     const loginForm = document.getElementById("loginForm");
     if (loginForm) {
@@ -37,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
             alert(`Welcome, ${username}!`);
             navigate("homeView");
             initHomeView();
+            toggleButtons(false);
         } else {
             alert("Please enter both username and password.");
         }
