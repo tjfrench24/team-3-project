@@ -18,21 +18,21 @@ This feature provides a visual representation of the user's fitness progress ove
 
 **Point Justification**: I found this feature very challenging to implement. However, this feature is not entirely complete. I spent a lot of my time on Milestone 3 creating this feature, writing a decent amount of code with a lot of working parts, but I could not figure out why the saved profile information does not render correctly when the information is saved. I spent a lot of time and effort trying to figure out how to fix this problem, but was unable to before the deadline. I could try to fix this before starting my part of the next milestone. 
 
-**Team Member**: Tim
+**Team Member**: Timothy French
 
 ## Buttons and Pages of Application 
 **Description**: Added and styled buttons that will be clicked to change pages in the application. Also added home page and fitness profile page to application for a more well-rounded application.
 
 **Points**: 1
 
-**Team Member**: Tim
+**Team Member**: Timothy French
 
 ## Applicaton Navigation 
 **Description**: Provides way for user to nagivate throughout the app. This feature starts the application at the login page. Then, the user can click the Home, Calendar, Progress Graph, and Fitness Profile buttons to navigate throughout the application. This also allows the correct information to be rendered when each page is loaded. (This feature does not include the code to require login and direct you to the home page after. That is a separate feature). 
 
 **Points**: 2
 
-**Team Member**: Tim
+**Team Member**: Timothy French
 
 ## Basal Metabolism Calculator
 This feature calculates the user's basal metabolism rate (BMR) by considering their age, weight, height, and exercise frequency. Understanding the BMR helps in determining the daily calorie requirements for the user, which is foundational for creating effective diet and exercise plans tailored to their fitness goals.
