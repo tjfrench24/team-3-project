@@ -12,20 +12,20 @@ Top 3 Commits for Milestone 2:
 - https://github.com/tjfrench24/team-3-project/commit/63a10eede54791d1c9a3a3b85688af106557b8c7
 
 Top 3 Commits for Milestone 3:
-- Task: Buttons and Pages of Application
+Task: Buttons and Pages of Application
 Details: Added and styled buttons that will be clicked to change pages in the application. Also added home page and fitness profile page to application for a more well-rounded application.
 Links:
 - https://github.com/tjfrench24/team-3-project/commit/dbd79b4bb0bdf76b54b3ebda408a0d3d1e561e60
 - https://github.com/tjfrench24/team-3-project/commit/17364667a01e8f42e2e04d492b89db2f41e21fc7
 - https://github.com/tjfrench24/team-3-project/commit/c962d76b7b2fc43daf0a39219ee8221106da157d
 
-- Task: Application Nagivation
+Task: Application Nagivation
   
 Details: Provides a way for users to nagivate throughout the app. This feature starts the application at the login page. Then, the user can click the Home, Calendar, Progress Graph, and Fitness Profile buttons to navigate throughout the application. This also allows the correct information to be rendered when each page is loaded.
 
 Link: https://github.com/tjfrench24/team-3-project/commit/d4bcb4190a4a77bcccf1a149fce22e9564816039
 
-- Task: Fitness Profile Page 
+Task: Fitness Profile Page 
 Details: This feature collects essential data from users such as height, weight, weight-lifting level, cardio level, and the user's fitness goals. Gathering this data is crucial for tailoring personalized workout and diet plans, enabling the app to provide specific and relevant recommendations to each user based on their unique profile. Users are able to update their profile and goals as they make progress in their fitness journey. When the page is loaded, data is retrieved from IndexedDB and displayed on the page if the user has already saved their profile in a previous session. If not, when the user enters their information and presses the "Save Profile" button, the inputs are saved in IndexedDB and retrieved to be displayed.
 
 Links:
