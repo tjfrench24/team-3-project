@@ -34,6 +34,13 @@ This feature provides a visual representation of the user's fitness progress ove
 
 **Team Member**: Timothy French
 
+## Navigation Enablement
+**Description**: This feature disables all other views before the user has logged in and enables them once the user has entered both their username and password and logged in. A log out button sends it back to the login page and disables the other views.
+
+**Points**: 2
+
+**Team Member**: Megan Greene
+
 ## Basal Metabolism Calculator
 This feature calculates the user's basal metabolism rate (BMR) by considering their age, weight, height, and exercise frequency. Understanding the BMR helps in determining the daily calorie requirements for the user, which is foundational for creating effective diet and exercise plans tailored to their fitness goals.
 

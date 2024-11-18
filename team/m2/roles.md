@@ -30,9 +30,10 @@ Top 3 Commits:
 - Role: Responsible for taking notes during meetings and making sure anyone who wasn't available knows everything that was discussed. Responsible with communicating with the group about anything they missed. 
 
 Top 3 Commits:
-- Commit 1: Filled out the form during the previous lab, taking everyone's information and ideas and fill everything out
-- Commit 2: Took and distributed notes from our first official meeting outside of class about features and tasks
-- Commit 3: Filled out the users.md file with the targeted users, user needs, and why the users are important
+- Commit 1: https://github.com/tjfrench24/team-3-project/commit/9dfdf1a863302ea3dbfc622ae6ec9298ca52d1f3, https://github.com/tjfrench24/team-3-project/commit/a14910f7a148ccd7aac79c5a380a08fd74d6a244, https://github.com/tjfrench24/team-3-project/commit/4d490f28418da3b24698ef290f79d550de1ca2bb: Edited the home page and enhanced the login so that the rest of the app is unavailable until login and after logging out
+
+- Commit 2: https://github.com/tjfrench24/team-3-project/commit/687d251802ad16c3078b0dcda6ca129528ce844c, https://github.com/tjfrench24/team-3-project/commit/a95d066a47b844b732611ee914638d24e4867c24, https://github.com/tjfrench24/team-3-project/commit/7379b3c402ec7ac8369d30269ef17222f2cd1330, https://github.com/tjfrench24/team-3-project/commit/bfaef7749acdc10578e89a4828a7c12a9ec66231: Added the scaffolding of the code and added required files
+- Commit 3: https://github.com/tjfrench24/team-3-project/commit/4d490f28418da3b24698ef290f79d550de1ca2bb: Created a feature sequence diagram for the login enablement feature
 
 ## Tuosheng Jiao - Architects
 - **Role**: Responsible for the planning of the overall technical implementation of the project, ensuring that each feature is developed in line with the design expectations and correctly solves the defined problems.
