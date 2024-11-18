@@ -11,7 +11,10 @@
         <link rel="stylesheet" href="styles/calendar.css">
         <link rel="stylesheet" href="styles/login.css">
         <link rel="stylesheet" href="styles/workout.css">
+        <link rel="stylesheet" href="styles/profile.css">
+        <link rel="stylesheet" href="styles/home.css">
         <script type="module" src="main.js"></script>
+        <script type="module" src="profile.js"></script>
     </head>
     <body>
         <nav>
@@ -34,6 +37,7 @@
                 </form>
             </div>                      
             <div id="homeView" class="view">
+
                 <h1>Fitness Home</h1>
                 <p>Welcome to your home dashboard.</p>
                 <p>This app is intended to help maintain your fitness goals, whatever they may be, and organize your workouts. 
@@ -60,17 +64,54 @@
             <div id="profileView" class="view">
                 <h1>Fitness Profile</h1>
                 <p>Your fitness data and current goals.</p>
+
+                <!-- Fitness Profile -->
+
+                <form id="profileForm">
+                    <label for="height">Height (ft/in):</label>
+                    <input type="text" id="height" name="height" required><br>
+                    
+                    <label for="weight">Weight (lbs):</label>
+                    <input type="text" id="weight" name="weight" required><br>
+                    
+                    <label for="cardioLevel">Rate Your Current Cardio Level:</label>
+                    <select id="cardioLevel" name="cardioLevel" required>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select><br>
+                    
+                    <label for="liftingLevel">Rate Your Current Weight-Lifting Level:</label>
+                    <select id="liftingLevel" name="liftingLevel" required>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Advanced">Advanced</option>
+                    </select><br>
+                    
+                    <label for="goal1">Goal 1:</label>
+                    <input type="text" id="goal1" name="goal1"><br>
+                    
+                    <label for="goal2">Goal 2:</label>
+                    <input type="text" id="goal2" name="goal2"><br>
+                    
+                    <label for="goal3">Goal 3:</label>
+                    <input type="text" id="goal3" name="goal3"><br>
+                    
+                    <button type="button" id="saveProfileButton">Save Profile</button>
+                </form>
+
+                <div id="profileData">
+                    <h3>Saved Profile Data:</h3>
+                    <p id="profileDisplay"></p>
+                </div>
             </div>
             <div id = "workoutView" class="view">
-                <div class = "container">
-                    <div class="header">
-                        <h1>Exercise plan</h1>
-                        <div id="selected-date"></div>
-                    </div>
+                <div class="header">
+                    <h1>Exercise plan</h1>
                 </div>
                 <div id="workout-list"></div>
                 <div class="calories">
-                    <p>Total consume: <span id="calories-count">0</span> calories</p>
+                    Total consume: <span id="calories-count">0</span> calories
                 </div>
             </div>
         </div>
