@@ -36,10 +36,12 @@ Commit 3: Fitness Profile Page
 ## Alan de Mersseman - Task Manager
 - Role: Responsible for organizing and tracking team tasks.
 Top 3 Commits
-- Commit 1: Assisted in effort to complete previous lab
-- Commit 2: Joined in idea generation for the website design and page layout
-- Commit 3: created UI-diagrams for calendar entry and weight loss graph website pages
-- https://github.com/tjfrench24/team-3-project
+- Commit 1: Planned meeting on the 3rd where we distributed milestone work
+- https://github.com/tjfrench24/team-3-project/commit/077962cdb5730402a7a7e55a9ddaf7696f6f8ade
+- Commit 2: Made the initial rough draft for the front end of the calendar tracking page
+- https://github.com/tjfrench24/team-3-project/commit/8c0c0b47b4299415e0ddd8b70ca016fe84e08be0
+- Commit 3: Created feature sequence Diagram for the Calendar Page
+- 
 
 ## Rishabh Devnani - Quality Control
 - Role: Responsible for making sure everything written or done by team members is up to the standards we need.
