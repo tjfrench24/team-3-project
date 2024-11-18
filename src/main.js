@@ -6,9 +6,13 @@ let currentDate = new Date();
 
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll("nav button");
-  buttons.forEach((b) => { 
-    if(b.id === "login") b.disabled = false;
-  });
+  function toggleButtons(enabled) {
+    buttons.forEach((b) => { 
+      if(b.id !== "login") b.disabled = enabled;
+      if(b.id === "login") b.disabled = !enabled;
+    });
+  }
+  toggleButtons(true);
 
   document
     .getElementById("login")
@@ -25,7 +29,14 @@ document.addEventListener("DOMContentLoaded", () => {
   document
     .getElementById("profile")
     .addEventListener("click", () => navigate("profileView"));
-
+  document
+    .getElementById("logout")
+    .addEventListener("click", () => {
+      navigate("loginView");
+      toggleButtons(true);
+      document.getElementById("username").value = '';
+      document.getElementById("password").value = '';
+  });
   const loginForm = document.getElementById("loginForm");
   if (loginForm) {
     loginForm.addEventListener("submit", (event) => {
@@ -33,10 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
       if (username && password) {
-        buttons.forEach((b) => { //enables each button if user has logged in
-          if(b.id !== "login") b.disabled = false;
-          if(b.id === "login") b.disabled = true;
-        });
+        toggleButtons(false);
         alert(`Welcome, ${username}!`);
         navigate("homeView");
       } else {
