@@ -4,12 +4,23 @@
 ## Randomize Calendar
 This feature allows users to track their workouts and calorie intake on a daily basis. Users can input their workout routines and dietary details, which helps in maintaining a consistent record of their fitness activities. The calendar view provides an overview of their progress, ensuring they stay on top of their fitness goals by visually organizing their routines and diet.
 
-**Assigned To**: Alan
+**Assigned To**: Alan/Liz/Kyle
+
+**Points**: 5
+
+**Points(Kyle)**: 3
+
+**Point Justification (Kyle Calendar Enhancements)**: The implementation of the calendar enhancements was a complex task that required meticulous attention to detail. I ensured the navigation functionality was intuitive and the design remained user-friendly. This feature is integral to the overall user experience, facilitating effective planning and organization of fitness activities. The thorough testing and debugging process ensured a smooth and error-free user interface.
 
 ## Progress Graph
-This feature provides a visual representation of the user's fitness progress over time. Users can see graphs and charts depicting their improvement or regression in various fitness metrics such as weight, muscle mass, or endurance. This visual aid helps users to quickly assess their progress and make data-driven adjustments to their workout and diet plans.
+This feature introduces a visual representation of the user's fitness progress over time, using dynamic graphs and charts. Users can now visually track improvements in various metrics such as weight, muscle mass, and endurance. This visual aid empowers users to make informed decisions about their workout and diet plans based on clear, data-driven insights.
+
+**Points**: 4
+
+**Point Justification**: Developing the Progress Graph involved integrating the Chart.jslibrary and configuring it to accurately display fitness metrics. The process was challenging due to the need for precise data handling and graphical representation. Despite encountering and overcoming several technical hurdles, I successfully delivered a feature that adds substantial value to the application by enhancing user engagement and motivation through visual progress tracking.
 
 **Assigned To**: Kyle
+
 
 ## Fitness Profile Page 
 **Description**: This feature collects essential data from users such as height, weight, weight-lifting level, cardio level, and the user's fitness goals. Gathering this data is crucial for tailoring personalized workout and diet plans, enabling the app to provide specific and relevant recommendations to each user based on their unique profile. Users are able to update their profile and goals as they make progress in their fitness journey. When the page is loaded, data is retrieved from IndexedDB and displayed on the page if the user has already saved their profile in a previous session. If not, when the user enters their information and presses the "Save Profile" button, the inputs are saved in IndexedDB and retrieved to be displayed. 
