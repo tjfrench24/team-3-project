@@ -21,10 +21,15 @@ Top 3 Commits
 ## Rishabh Devnani - Quality Control
 - Role: Responsible for making sure everything written or done by team members is up to the standards we need.
 
-Top 3 Commits:
+Top 3 Commits for Milestone 2:
 - Commit 1: Suggested, proofread and added features of the project to the features.md file to ensure what we need in our project.
 - Commit 2: Made sure ui-diagrams.md aligns with the features we discussed and wrote about.
 - Commit 3: Final check of all files before submission to ensure quality and detailed description about our project.
+
+Top 3 Commits for Milestone 3:
+- Commit 1: Edited login page and scaffolding to ensure the login page works correctly and directs the user to the home page. https://github.com/tjfrench24/team-3-project/commit/4426e4d4666a0c70af3e982506f8de868a395594
+- Commit 2: Created the home page and added all the necessary components to the home page such as workout stats, progress, upcoming workouts, and achievements. https://github.com/tjfrench24/team-3-project/commit/41b453ceb0b9ba86008c2976a8116d496bcefcca
+- Commit 3: Created a feature diagram for the project, added all the features that I created in our project and how they are connected to each other. https://github.com/tjfrench24/team-3-project/commit/87e01a4702f8ba8b39087d08273476b2773a4d0d
 
 ## Megan Greene - Notetaker
 - Role: Responsible for taking notes during meetings and making sure anyone who wasn't available knows everything that was discussed. Responsible with communicating with the group about anything they missed. 
