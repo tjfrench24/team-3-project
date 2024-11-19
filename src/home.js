@@ -31,6 +31,15 @@ export function initHomeView() {
   // Clear existing content
   homeView.innerHTML = `
     <div class="home-container">
+      <h1>Welcome to your home dashboard!</h1>
+      <p>This app is intended to help maintain your fitness goals, whatever they may be, and organize your workouts. 
+          To check your calendar for upcoming workouts, click the calendar button at the top of the page! To keep an
+          eye out on your progress and see how you're doing, check out your progress page with the Progress Graph button. If you want to see 
+          your fitness profile and take a look at some stats and your goals and fitness levels, head on over to the Fitness 
+          Profile page with the button. We want to create easy, helpful workout schedules fit to your needs so you don't have to! Our goal is to provide 
+          a quick, simple interface so that you can meet all your goals as seamlessly as possible. We invite you to be your
+          best self and conquer your fitness goals.
+      </p>
       <div class="stats-grid">
         <div class="stat-card">
           <h3>Today's Progress</h3>
