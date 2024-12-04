@@ -60,5 +60,17 @@
 
 - Task: Revise features.md.
 - Details: Describe the features that I completed and assigned point values for these features
-- Link: https://github.com/tjfrench24/team-3-project/commit/e7587389d83514db644b48c3955ab617a2c39b1c 
+- Link: https://github.com/tjfrench24/team-3-project/commit/e7587389d83514db644b48c3955ab617a2c39b1c
+
+## December 3, 2024
+
+- Task: Create structure for backend of application 
+- Details: Created backend folder. Inside, there are folders for the databse, controllers, models, middleware, routes, and a file for the server. 
+- Link: https://github.com/tjfrench24/team-3-project/commit/69e9cb8a75284b1d6850e72d77c8d5c2660535a0 
+
+## December 3, 2024
+
+- Task: Implement backend for weight-liftng tracker 
+- Details: Implemented entire backend for weight-lifting tracker. Through this task, I also created the database for the backend of the application. Files that were created or changed are workoutController.js, sequelize.js, requestValidation.js, workouts.js, workoutRoutes.js, and server.js. 
+- Link: https://github.com/tjfrench24/team-3-project/commit/69e9cb8a75284b1d6850e72d77c8d5c2660535a0
 
