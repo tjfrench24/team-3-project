@@ -4,7 +4,7 @@ const validateLogWorkout = (req, res, next) => {
     const errors = [];
   
     // require workout name 
-    if (workout !== '') {
+    if (workout === '') {
       errors.push({msg: 'Workout name is required'});
     }
     // weight must be an integer, can be 0
