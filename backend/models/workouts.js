@@ -10,11 +10,19 @@ const Workout = sequelize.define('Workout', {
     type: DataTypes.STRING,
     allowNull: false,  
   },
-  // # reps input 
+  // weight input 
+  weight: {
+    type: DataTypes.INTEGER,
+    // can be a workout such as pull-ups, which can be weighted or unweighted
+    // weight can't be null, but it can be 0. 
+    allowNull: false,
+  },
+  // # reps input
   reps: {
     type: DataTypes.INTEGER,
     allowNull: false,  
     validate: {
+      // must be at least 1 rep 
       min: 1,  
     },
   },
@@ -23,6 +31,7 @@ const Workout = sequelize.define('Workout', {
     type: DataTypes.INTEGER,
     allowNull: false,  
     validate: {
+      // must be at least 1 set 
       min: 1,  
     },
   },
