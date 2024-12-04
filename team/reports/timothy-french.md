@@ -77,6 +77,5 @@
 ## December 4, 2024
 
 - Task: Add weight attribute to weight-lifting tracker. 
-- Details: Added weight attribute to weight-lifting tracker to measure progress in weight for specific exercises. Files changed are workouts.js, workoutController.js, and requestValidation.js.  
--Link: https://github.com/tjfrench24/team-3-project/commit/283db085471d369cf868b2f02a59bd0122f1adfe
-
+- Details: Added weight attribute to weight-lifting tracker to measure progress in weight for specific exercises. Files changed are workouts.js, workoutController.js, and requestValidation.js.
+- Link: https://github.com/tjfrench24/team-3-project/commit/283db085471d369cf868b2f02a59bd0122f1adfe
