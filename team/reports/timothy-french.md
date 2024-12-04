@@ -74,3 +74,9 @@
 - Details: Implemented entire backend for weight-lifting tracker. Through this task, I also created the database for the backend of the application. Files that were created or changed are workoutController.js, sequelize.js, requestValidation.js, workouts.js, workoutRoutes.js, and server.js. 
 - Link: https://github.com/tjfrench24/team-3-project/commit/69e9cb8a75284b1d6850e72d77c8d5c2660535a0
 
+## December 4, 2024
+
+- Task: Add weight attribute to weight-lifting tracker. 
+- Details: Added weight attribute to weight-lifting tracker to measure progress in weight for specific exercises. Files changed are workouts.js, workoutController.js, and requestValidation.js.  
+-Link: https://github.com/tjfrench24/team-3-project/commit/283db085471d369cf868b2f02a59bd0122f1adfe
+
