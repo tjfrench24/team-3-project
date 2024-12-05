@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 // import routes 
 const workoutRoutes = require('./routes/workoutRoutes');
+const cardioRoutes = require('./routes/cardioRoutes');
 // import sequelize instance 
 const db = require('./database/sequelize');
 
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 
 // set up routes
 app.use('/workouts', workoutRoutes);
+app.use('/cardio', cardioRoutes); 
 
 // connect to the database
 db.sync()

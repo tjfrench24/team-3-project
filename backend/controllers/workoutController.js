@@ -1,5 +1,5 @@
 // import the Workout model 
-const Workout = require('../models/Workout');
+const Workout = require('../models/Workouts');
 
 // function to create a new workout
 const logWorkout = async (req, res) => {

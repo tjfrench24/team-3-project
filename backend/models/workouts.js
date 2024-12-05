@@ -1,7 +1,7 @@
 // import to define data types of columns in database table 
 const {DataTypes} = require('sequelize');
 /// connect to SQLite database 
-const sequelize = require('../databse/sequelize');
+const sequelize = require('../database/sequelize');
 
 // create the workout model 
 const Workout = sequelize.define('Workout', {
