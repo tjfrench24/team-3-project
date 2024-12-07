@@ -1,24 +1,35 @@
 // import to define data types of columns in database table 
-const {DataTypes} = require('sequelize');
+import {DataTypes} from 'sequelize'
 /// connect to SQLite database 
-const sequelize = require('../database/sequelize');
+import {sequelize} from '../database/sequelize.js';
 
 // create the workout model 
 const Workout = sequelize.define('Workout', {
   // workout name input 
   workout: {
-    type: DataTypes.STRING,
+    type: DataTypes.ARRAY(DataTypes.JSON),
     allowNull: false,  
   },
   // weight input 
   weight: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.FLOAT,
     // can be a workout such as pull-ups, which can be weighted or unweighted
     // weight can't be null, but it can be 0. 
     allowNull: false,
   },
+  muscleRate:{
+    type:DataTypes.FLOAT
+  },
+  totalCalories:{
+    type: DataTypes.INTEGER
+  },
+  date:{
+    type:DataTypes.DATE,
+    defaultValue:DataTypes.NOW
+  }
+  
   // # reps input
-  reps: {
+  /*reps: {
     type: DataTypes.INTEGER,
     allowNull: false,  
     validate: {
@@ -34,7 +45,7 @@ const Workout = sequelize.define('Workout', {
       // must be at least 1 set 
       min: 1,  
     },
-  },
+  },*/
 });
 
-module.exports = Workout;
+export default Workout

@@ -1,6 +1,6 @@
 // import the Workout model 
-const Workout = require('../models/Workouts');
-
+import Workout from '../models/workouts.js';
+/*
 // function to create a new workout
 const logWorkout = async (req, res) => {
   const {workout, weight, reps, sets} = req.body;
@@ -50,3 +50,19 @@ module.exports = {
   getAllWorkouts,
   getWorkoutSummary,
 };
+*/
+export const saveWorkout = async(req,res)=>{
+  try{
+    console.log('Received data',req.body)
+    let {workout, weight,muscleRate,totalCalories} = req.body
+    let data = await Workout.create({
+      workout,weight,muscleRate,totalCalories
+    })
+    console.log('Saved data',data)
+    res.status(201).json(data)
+  }
+  catch(error){
+    console.error('Error saving',error)
+    res.status(500).json({error:error.message})
+  }
+}
