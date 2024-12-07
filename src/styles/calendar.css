@@ -13,8 +13,10 @@
   #calendarHeader {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 600px;
+    margin-bottom: 20px;
   }
   
   #calendarHeader button {
@@ -40,14 +42,23 @@
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 0px;
-    border: 2px solid #000;
+    border: 2px solid #878787;
+    border-radius: 5px;
     max-width: 605px;
   }
   
   .grid-container div {
-    border: 1px solid #000;
+    border: 1px solid #878787;
     padding: 17px;
     text-align: center;
+  }
+
+  .grid-container span {
+    height: 25px;
+    width: full;
+    text-align: center;
+    padding-top: 5px;
+    border-bottom: 2px solid #878787;
   }
   
   .grid-item {
@@ -57,8 +68,12 @@
     color: black;
   }
   
+  .grid-item.empty {
+    background-color: white;
+    border-color: white;
+  }
   .grid-item:hover {
-    background-color: red;
+    background-color: #868e96;
     color: white;
   }
   
