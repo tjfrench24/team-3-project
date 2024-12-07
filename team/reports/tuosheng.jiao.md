@@ -19,3 +19,13 @@
 - **Task**: Modified the exercise plan page to properly interact with the updated calendar.
 - **Details**: Because my teammate updated and upgraded the calendar page, and then I updated my code to enable it to successfully interact with the calendar page.
 - **Link to Commit**: [Commit on exercise plan](https://github.com/tjfrench24/team-3-project/commit/b8df957dcd92158d1a53921c80cbd7477c77355c)
+
+### December 6, 2024
+- **Task**: Modified the original workout page to allow users to add their own workouts for the day.
+- **Details**: After discussing it together, we decided to give users more freedom, so we decided to let users add their daily exercise program on the workout page. So I reworked the workout page
+- **Link to Commit**: [Commit on workout](https://github.com/tjfrench24/team-3-project/pull/39)
+
+### December 7, 2024
+- **Task**: Added a back-end storage feature so that when a user selects their campaign, it can be stored to the back-end, but it cannot be successfully stored in the database
+- **Details**: I modified some of the backend files such as controller, server, route, and so on. It is used to implement the data for storing user plans.
+- **Link to Commit**: [Commit on workout](https://github.com/tjfrench24/team-3-project/pull/39)
