@@ -109,14 +109,60 @@
                     <p id="profileDisplay"></p>
                 </div>
             </div>
-            <div id = "workoutView" class="view">
+
+            <div id="workoutView" class="view">
                 <div class="header">
-                    <h1>Exercise plan</h1>
+                <h1>Exercise plan</h1>
                 </div>
-                <div id="workout-list"></div>
+                <div id="workout-container">
+                <div id="workout-nav">
+                <div class="main-category">
+                <div class="category-header" onclick="toggleMenu('muscle-gain')">muscle gain</div>
+                <div id="muscle-gain" class="sub-menu">
+                <div class="difficulty" onclick="showWorkout('muscle-1')">easy</div>
+                <div class="difficulty" onclick="showWorkout('muscle-2')">moderate</div>
+                <div class="difficulty" onclick="showWorkout('muscle-3')">hard</div>
+                </div>
+                </div>
+                
+                <div class="main-category">
+                <div class="category-header" onclick="toggleMenu('fat-loss')">fat loss</div>
+                <div id="fat-loss" class="sub-menu">
+                <div class="difficulty" onclick="showWorkout('fat-1')">easy</div>
+                <div class="difficulty" onclick="showWorkout('fat-2')">moderate</div>
+                <div class="difficulty" onclick="showWorkout('fat-3')">hard</div>
+                </div>
+                </div>
+                
+                <div class="main-category">
+                <div class="category-header" onclick="toggleMenu('shaping')">shaping</div>
+                <div id="shaping" class="sub-menu">
+                <div class="difficulty" onclick="showWorkout('shaping-1')">easy</div>
+                <div class="difficulty" onclick="showWorkout('shaping-2')">moderate</div>
+                <div class="difficulty" onclick="showWorkout('shaping-3')">hard</div>
+                </div>
+                </div>
+                </div>
+                <div id="workout-content"></div>
+                </div>
                 <div class="calories">
-                    Total consume: <span id="calories-count">0</span> calories
+                    <div class="user-input">
+                        <label>Today Weight (lbs):<input type = "number" id = "userWeight"></label>
+                        <label>Today Muscle rate (%): <input type="number" id="muscleRate"></label>
+                    </div>
+                Total consume: <span id="calories-count">0</span> calories
+                <button onclick = "saveWorkout()">Save</button>
                 </div>
-            </div>
+                </div>
+
+
+
+
+            
+
+
+
+
+            
         </div>
     </body>

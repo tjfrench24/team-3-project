@@ -1,7 +1,8 @@
 // handle HTTP requests with express package 
-const express = require('express');
+import express from 'express'
+import {saveWorkout} from '../controllers/workoutController.js'
 // import workoutController 
-const workoutController = require('../controllers/workoutController');  
+/*const workoutController = require('../controllers/workoutController');  
 // import middleware for validation 
 const workoutValidation = require('../middleware/workoutValidation');  
 
@@ -22,3 +23,8 @@ router.get('/summary', workoutController.getWorkoutSummary);
 
 // export the router 
 module.exports = router;
+*/
+const router = express.Router();
+router.post('/save',saveWorkout)
+console.log('Routes initialized')
+export default router
