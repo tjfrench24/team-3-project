@@ -32,6 +32,6 @@ sequelize.sync()
   .catch(e => console.log('Error connecting to the database:', e));
 
 // start the server
-app.listen(5000, () => {
+app.listen(3000, () => {
   console.log('Running server on port 5000');
 });

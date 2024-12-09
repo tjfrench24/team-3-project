@@ -65,4 +65,5 @@ export const saveWorkout = async(req,res)=>{
     console.error('Error saving',error)
     res.status(500).json({error:error.message})
   }
+  res.end();
 }
