@@ -18,6 +18,41 @@
         <script type="module" src="profile.js"></script>
         <script type="module" src="scripts/graph.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            async function register() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const response = await fetch("/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+            });
+            const data = await response.json();
+            console.log(JSON.stringify(data, null, 2));
+            alert(data.message);
+        }
+
+            async function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const response = await fetch("/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password }),
+            });
+            const data = await response.json();
+            console.log(JSON.stringify(data, null, 2));
+            alert(data.message);
+        }
+
+        async function logout() {
+            const response = await fetch("/logout");
+            const data = await response.json();
+            console.log(JSON.stringify(data, null, 2));
+            alert(data.message);
+        }
+
+        </script>
     </head>
     <body>
         <nav>
@@ -26,7 +61,7 @@
             <button id="calendar" disabled>Calendar</button>
             <button id="graph" disabled>Progress Graph</button>
             <button id="profile" disabled>Fitness Profile</button>
-            <button id="logout" disabled>Log out</button>
+            <button onclick="logout()" disabled>Log out</button>
         </nav>
 
         <div id="views">
@@ -36,9 +71,20 @@
                 <form id="loginForm">
                     <input type="text" id="username" placeholder="Username" required />
                     <input type="password" id="password" placeholder="Password" required />
-                    <button type="submit">Log In</button>
+                    <button onclick="login()">Login</button>
+                    <button type="button" id="register">Register</button>
                 </form>
-            </div>                      
+            </div>  
+            <div id="registrationView" class="view">
+                <h1>Register for HealthHub!</h1>
+                <form id="registrationForm">
+                    <input type="text" id="username" placeholder="Username" required />
+                    <input type="password" id="password" placeholder="Password" required />
+                    <button onclick="register()" >Register</button>
+                    <a href="/auth/google">Login with Google</a>
+
+                </form>
+            </div>                    
             <div id="homeView" class="view">
 
                 <h1>Fitness Home</h1>

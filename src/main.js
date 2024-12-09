@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
         .getElementById("login")
         .addEventListener("click", () => navigate("loginView"));
     document
+        .getElementById("register")
+        .addEventListener("click", (event) => {
+            event.preventDefault();
+            navigate("registrationView");
+        });
+    document
         .getElementById("home")
         .addEventListener("click", () => {
           navigate("homeView");
