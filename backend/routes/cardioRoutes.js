@@ -1,5 +1,7 @@
 // handle HTTP requests with express package 
-const express = require('express');
+import express from 'express'
+import {saveCardio} from '../controllers/cardioController.js'
+/*
 // import cardioController 
 const cardioController = require('../controllers/cardioController');  
 // import middleware for validation 
@@ -22,3 +24,8 @@ router.get('/summary', cardioController.getCardioSummary);
 
 // export the router 
 module.exports = router;
+*/
+const router = express.Router();
+router.post('/save', saveCardio)
+console.log('Routes initialized')
+export default router
