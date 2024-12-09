@@ -59,7 +59,7 @@ module.exports = {
 export const saveCardio = async(req,res)=>{
   try{
     console.log('Received data',req.body)
-    let {cardio, duration , distance} = req.body
+    let {userid, cardio, duration , distance} = req.body
     let data = await Cardio.create({
       cardio, duration , distance
     })

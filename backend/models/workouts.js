@@ -5,6 +5,10 @@ import {sequelize} from '../database/sequelize.js';
 
 // create the workout model 
 const Workout = sequelize.define('Workout', {
+  userid: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
   // workout name input 
   workout: {
     type: DataTypes.ARRAY(DataTypes.JSON),

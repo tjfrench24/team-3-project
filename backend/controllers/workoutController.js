@@ -54,7 +54,7 @@ module.exports = {
 export const saveWorkout = async(req,res)=>{
   try{
     console.log('Received data',req.body)
-    let {workout, weight,muscleRate,totalCalories} = req.body
+    let {userid, workout, weight,muscleRate,totalCalories} = req.body
     let data = await Workout.create({
       workout,weight,muscleRate,totalCalories
     })
