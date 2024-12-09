@@ -6,6 +6,10 @@ const sequelize = require('../database/sequelize');
 // create the Cardio model 
 const Cardio = sequelize.define('Cardio', {
   // cardio name input 
+  userid: {
+    type: DataTypes.INTEGER,
+    allowNull: false
+  },
   cardio: {
     type: DataTypes.STRING,
     allowNull: false,  
