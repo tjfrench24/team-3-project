@@ -1,7 +1,17 @@
 // import to define data types of columns in database table 
-const {DataTypes} = require('sequelize');
+//const {DataTypes} = require('sequelize');
+import { Sequelize, DataTypes } from '@sequelize/core';
+import { SqliteDialect } from '@sequelize/sqlite3';
+
+// import sequelize from '../database/sequelize.js';
+// import { DataTypes } from '../database/sequelize.js';
 /// connect to SQLite database 
-const sequelize = require('../database/sequelize');
+//const sequelize = require('../database/sequelize');
+
+const sequelize = new Sequelize({
+  dialect: SqliteDialect,
+  storage: 'authentication.sqlite',
+});
 
 // create the workout model 
 const Workout = sequelize.define('Workout', {
@@ -37,4 +47,5 @@ const Workout = sequelize.define('Workout', {
   },
 });
 
-module.exports = Workout;
+
+export default Workout;

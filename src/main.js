@@ -3,6 +3,7 @@ import { buildCalendar } from "./scripts/calendar.js";
 import { initializeWorkouts, toggleComplete } from "./scripts/workout.js";
 import { initHomeView } from "./home.js";
 import { addTodayWorkout } from "./scripts/calendar.js";
+//import { login, logout, loginWithGoogle, register } from "../backend/controllers/userController.js";
 
 let currentDate = new Date();
 
@@ -19,13 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initHomeView();
     document
-        .getElementById("login")
-        .addEventListener("click", () => navigate("loginView"));
+        .getElementById("loginButton")
+        .addEventListener("click", () => {
+            //login();
+            navigate("homeView");
+            toggleButtons(false);
+        });
+
     document
         .getElementById("register")
-        .addEventListener("click", (event) => {
-            event.preventDefault();
-            navigate("registrationView");
+        .addEventListener("click", () => {
+            //register();
+            navigate('registrationView');
         });
     document
         .getElementById("home")
@@ -43,20 +49,21 @@ document.addEventListener("DOMContentLoaded", () => {
         .getElementById("profile")
         .addEventListener("click", () => navigate("profileView"));
     document
-    .getElementById("logout")
-    .addEventListener("click", () => {
-      navigate("loginView");
-      toggleButtons(true);
-      document.getElementById("username").value = '';
-      document.getElementById("password").value = '';
+        .getElementById("logoutButton")
+        .addEventListener("click", () => {
+            //logout();
+            navigate('loginView');
+            toggleButtons(true);
+            document.getElementById("loginUsername").value = '';
+            document.getElementById("loginPassword").value = '';
     });
 
     const loginForm = document.getElementById("loginForm");
     if (loginForm) {
         loginForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+        const username = document.getElementById("loginUsername").value;
+        const password = document.getElementById("loginPassword").value;
         if (username && password) {
             alert(`Welcome, ${username}!`);
             navigate("homeView");

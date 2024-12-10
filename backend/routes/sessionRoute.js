@@ -1,19 +1,21 @@
 import express from "express";
-import passport from ".../auth/passport.js";
+import passport from "../auth/passport.js";
 import {
+    loginWithGoogle,
     register,
     login,
     logout,
     googleAuthCallback,
     getAdminArea,
     getProfile,
-} from ".../controllers/userController.js";
-import { isAuthenticated, authorizeRole } from ".../auth/middleware.js";
+} from "../controllers/userController.js";
+import { isAuthenticated, authorizeRole } from "../auth/middleware.js";
 
 const router = express.Router();
 
 //Routes for registration and login
 router.post("/register", register);
+router.post("/loginWithGoogle", loginWithGoogle);
 router.post("/login", login);
 router.get("/logout", logout);
 

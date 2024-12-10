@@ -1,8 +1,9 @@
 // import the Workout model 
-const Workout = require('../models/Workouts');
+//const Workout = require('../models/Workouts');
+import Workout from '../models/workouts.js';
 
 // function to create a new workout
-const logWorkout = async (req, res) => {
+export const logWorkout = async (req, res) => {
   const {workout, weight, reps, sets} = req.body;
   // create a new workout in the database
   const newWorkout = await Workout.create({workout, weight, reps, sets});
@@ -11,7 +12,7 @@ const logWorkout = async (req, res) => {
 };
 
 // function for deleting a workout by id 
-const deleteWorkout = async (req, res) => {
+export const deleteWorkout = async (req, res) => {
   const {id} = req.params;  
   // delete the workout by ID
   const deletedWorkout = await Workout.destroy({where: {id}});
@@ -22,14 +23,14 @@ const deleteWorkout = async (req, res) => {
 };
 
 // function to get all workouts from the database
-const getAllWorkouts = async (req, res) => {
+export const getAllWorkouts = async (req, res) => {
   const workouts = await Workout.findAll();
   // 200 indicates success in retrieivng workouts 
   res.status(200).json(workouts);
 };
 
 // function to aggregate all reps and sets for each workout to show lifetime totals
-const getWorkoutSummary = async (req, res) => {
+export const getWorkoutSummary = async (req, res) => {
   const summary = await Workout.findAll({
     attributes: [
       // get total sets for specific workout 
@@ -44,9 +45,12 @@ const getWorkoutSummary = async (req, res) => {
   res.status(200).json(summary);
 };
 
-module.exports = {
-  logWorkout,
-  deleteWorkout,
-  getAllWorkouts,
-  getWorkoutSummary,
-};
+// module.exports = {
+//   logWorkout,
+//   deleteWorkout,
+//   getAllWorkouts,
+//   getWorkoutSummary,
+// };
+//export {logWorkout, deleteWorkout, getAllWorkouts, getWorkoutSummary};
+
+export default Workout;  

@@ -46,7 +46,9 @@ const validateLogWorkout = (req, res, next) => {
     next();
   };
   
-  module.exports = {
+  export {
     validateLogWorkout,
     validateDeleteWorkout
   };
+
+  export default validateLogWorkout;

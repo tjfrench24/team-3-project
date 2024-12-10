@@ -1,0 +1,40 @@
+{
+  "name": "team-3-project",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "contributors": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@sequelize/sqlite3": "^7.0.0-alpha.43",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "http-server": "^14.1.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "sequelize": "^6.37.5",
+    "sqlite3": "^5.1.7"
+  }
+}

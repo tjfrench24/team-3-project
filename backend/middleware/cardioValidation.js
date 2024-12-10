@@ -1,5 +1,5 @@
 // function to make sure cardio entry is valid 
-const validateLogCardio = (req, res, next) => {
+export const validateLogCardio = (req, res, next) => {
     const {cardio, duration, distance} = req.body;
     const errors = [];
   
@@ -27,7 +27,7 @@ const validateLogCardio = (req, res, next) => {
   };
   
   // function to make sure the id entry is a positive integer to delete a cardio session from the database
-  const validateDeleteCardio = (req, res, next) => {
+  export const validateDeleteCardio = (req, res, next) => {
     const {id} = req.params;
     const errors = [];
     
@@ -43,8 +43,5 @@ const validateLogCardio = (req, res, next) => {
     // if no errors, go to the next part of the validation 
     next();
   };
-  
-  module.exports = {
-    validateLogCardio,
-    validateDeleteCardio
-  };
+
+  export default validateLogCardio;  

@@ -1,8 +1,9 @@
 // import the Cardio model 
-const Cardio = require('../models/Cardio');
+//const Cardio = require('../models/Cardio');
+import Cardio from '../models/cardio.js';
 
 // function to log a new cardio session 
-const logCardio = async (req, res) => {
+export const logCardio = async (req, res) => {
   const {cardio, duration, distance} = req.body;
   // create a new cardio session in the database
   const newCardio = await Cardio.create({cardio, duration, distance});
@@ -11,7 +12,7 @@ const logCardio = async (req, res) => {
 };
 
 // function for deleting a cardio session by id 
-const deleteCardio = async (req, res) => {
+export const deleteCardio = async (req, res) => {
   const {id} = req.params;  
   // delete the cardio by ID
   const deletedCardio = await Cardio.destroy({where: {id}});
@@ -22,14 +23,14 @@ const deleteCardio = async (req, res) => {
 };
 
 // function to get all cardio sessions from the database
-const getAllCardio = async (req, res) => {
+export const getAllCardio = async (req, res) => {
   const cardioSessions = await Cardio.findAll();
   // 200 indicates success in retrieving cardio 
   res.status(200).json(cardioSessions);
 };
 
 // function to aggregate all distance and duration for each type of cardio to show lifetime totals
-const getCardioSummary = async (req, res) => {
+export const getCardioSummary = async (req, res) => {
   const summary = await Cardio.findAll({
     attributes: [
       // get total distance for specific cardio
@@ -44,9 +45,5 @@ const getCardioSummary = async (req, res) => {
   res.status(200).json(summary);
 };
 
-module.exports = {
-  logCardio,
-  deleteCardio,
-  getAllCardio,
-  getCardioSummary,
-};
+
+export default Cardio;  

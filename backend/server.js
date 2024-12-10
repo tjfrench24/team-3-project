@@ -1,18 +1,19 @@
-import dotenv from "dotenv";
 import express from "express";
 import session from "express-session";
 import passport from "./auth/passport.js";
 import sessionRoute from "./routes/sessionRoute.js";
-
+import path from 'path';
 // handle HTTP requests with express package 
-const express = require('express');
 // handle request data with middleware 
-const bodyParser = require('body-parser');
+import bodyParser from 'body-parser';
+import workoutRoutes from './routes/workoutRoutes.js'
+import cardioRoutes from './routes/cardioRoutes.js'
 // import routes 
-const workoutRoutes = require('./routes/workoutRoutes');
-const cardioRoutes = require('./routes/cardioRoutes');
+// const workoutRoutes = require('./routes/workoutRoutes');
+// const cardioRoutes = require('./routes/cardioRoutes');
 // import sequelize instance 
-const db = require('./database/sequelize');
+import db from './database/sequelize.js';
+//const db = require('./database/sequelize');
 
 //create instance of express 
 const app = express();
@@ -43,7 +44,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Use routes from routes.js
-app.use("/", routes);
+app.use("/", sessionRoute);
 
 // use bodyParser middleware with json method 
 app.use(bodyParser.json()); 

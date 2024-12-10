@@ -52,6 +52,10 @@ export const logout = (req, res) => {
     });
 };
 
+export const loginWithGoogle = (req, res) => {
+    res.redirect("/auth/google");
+};
+
 
 // Google auth callback route
 // Called by google after user has authenticated

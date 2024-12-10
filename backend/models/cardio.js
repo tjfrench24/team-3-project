@@ -1,7 +1,15 @@
-// import to define data types of columns in database table 
-const {DataTypes} = require('sequelize');
+// import to define data types of columns in database table
+import { Sequelize, DataTypes } from '@sequelize/core';
+import { SqliteDialect } from '@sequelize/sqlite3';
+// import sequelize from "../database/sequelize.js";
+// import { DataTypes } from "sequelize";
+//const {DataTypes} = require('sequelize');
 /// connect to SQLite database 
-const sequelize = require('../database/sequelize');
+//const sequelize = require('../database/sequelize');
+const sequelize = new Sequelize({
+  dialect: SqliteDialect,
+  storage: 'authentication.sqlite',
+});
 
 // create the Cardio model 
 const Cardio = sequelize.define('Cardio', {
@@ -29,4 +37,4 @@ const Cardio = sequelize.define('Cardio', {
   },
 });
 
-module.exports = Cardio;
+export default Cardio;
