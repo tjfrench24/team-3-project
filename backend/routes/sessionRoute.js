@@ -11,7 +11,9 @@ import {
 } from "../controllers/userController.js";
 import { isAuthenticated, authorizeRole } from "../auth/middleware.js";
 
+
 const router = express.Router();
+
 
 //Routes for registration and login
 router.post("/register", register);

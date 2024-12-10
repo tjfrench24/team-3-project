@@ -1,6 +1,7 @@
 import bcrypt from "bcryptjs";
 import dotenv from "dotenv";
 import User from "../models/user.js";
+import cors from 'cors';
 
 // Load environment variables
 dotenv.config();
@@ -28,17 +29,23 @@ export const register = async (req, res) => {
 
 // Login route: checks credentials and logs them in
 export const login = async (req, res, next) => {
+    console.log("Entered backend login");
+    
     const { username, password } = req.body;
+    console.log(username);
+    console.log(password)
     const user = await User.findOne({ where: { username }});
     if(!user || !(await bcrypt.compare(password, user.password))) {
         return res.status(401).json(factoryResponse(401, "Invalid login"));
     }
+    console.log(`found user ${user}`);
 
     // Log user in using req.login() function provided by passport
     // establishes login session for the user
     req.login(user, (err) => 
         err ? next(err) : res.json(factoryResponse(200, "Login successful"))
     );
+
 };
 
 // logout route

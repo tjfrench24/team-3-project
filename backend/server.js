@@ -8,6 +8,7 @@ import path from 'path';
 import bodyParser from 'body-parser';
 import workoutRoutes from './routes/workoutRoutes.js'
 import cardioRoutes from './routes/cardioRoutes.js'
+import cors from 'cors';
 // import routes 
 // const workoutRoutes = require('./routes/workoutRoutes');
 // const cardioRoutes = require('./routes/cardioRoutes');
@@ -17,6 +18,7 @@ import db from './database/sequelize.js';
 
 //create instance of express 
 const app = express();
+app.use(cors());
 
 // Configure static file serving
 app.use(express.static("public"));
@@ -59,8 +61,8 @@ db.sync()
   .catch(e => console.log('Error connecting to the database:', e));
 
 // start the server
-app.listen(3000, () => {
-  console.log('Running server on port 3000');
+app.listen(3001, () => {
+  console.log('Running server on port 3001');
 });
 
 export default app;
