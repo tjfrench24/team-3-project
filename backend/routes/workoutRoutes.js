@@ -1,30 +1,29 @@
-// handle HTTP requests with express package 
-import express from 'express'
-import {saveWorkout} from '../controllers/workoutController.js'
-// import workoutController 
-/*const workoutController = require('../controllers/workoutController');  
-// import middleware for validation 
-const workoutValidation = require('../middleware/workoutValidation');  
+import express from 'express';
+import WorkoutController from '../controllers/workoutController.js'; 
 
-// create router to handle route requests 
-const router = express.Router();
+class WorkoutRoutes {
+  constructor() {
+    this.router = express.Router(); 
+    this.initializeRoutes(); 
+  }
 
-// POST route to create a new workout and add to the database 
-router.post('/', workoutValidation.validateLogWorkout, workoutController.logWorkout);
+  initializeRoutes() {
+    this.router.get("/workouts", async (req, res) => {
+      await WorkoutController.getAllWorkouts(req, res);
+    });
 
-// GET route to get all workouts from the database 
-router.get('/', workoutController.getAllWorkouts);
+    this.router.post("/workout", async (req, res) => {
+      await WorkoutController.addWorkout(req, res);
+    });
+ 
+    this.router.delete("/workouts", async (req, res) => {
+      await WorkoutController.clearWorkouts(req, res);
+    });
+  }
 
-// DELETE route to remove a workout from the database by its id. 
-router.delete('/:id', workoutValidation.validateDeleteWorkout, workoutController.deleteWorkout);
+  getRouter() {
+    return this.router;
+  }
+}
 
-// GET route to get workout lifetime total sets and reps of each workout
-router.get('/summary', workoutController.getWorkoutSummary);
-
-// export the router 
-module.exports = router;
-*/
-const router = express.Router();
-router.post('/save',saveWorkout)
-console.log('Routes initialized')
-export default router
+export default new WorkoutRoutes().getRouter();
