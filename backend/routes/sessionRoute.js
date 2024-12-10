@@ -21,8 +21,9 @@ router.post("/loginWithGoogle", loginWithGoogle);
 router.post("/login", login);
 router.get("/logout", logout);
 
+
 //Google Auth routes
-router.get(
+router.post(
     "/auth/google",
     passport.authenticate("google", {scope: ["profile"]})
 );

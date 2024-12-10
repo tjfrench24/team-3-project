@@ -2,7 +2,6 @@ import express from "express";
 import session from "express-session";
 import passport from "./auth/passport.js";
 import sessionRoute from "./routes/sessionRoute.js";
-import path from 'path';
 // handle HTTP requests with express package 
 // handle request data with middleware 
 import bodyParser from 'body-parser';

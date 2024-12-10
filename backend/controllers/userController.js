@@ -17,6 +17,8 @@ const existsUser = async (username) => {
 // Creates a new user in the database
 export const register = async (req, res) => {
     //check if username taken
+    const { username, password } = req.body; 
+    console.log("Backend:",username);
     if (await existsUser(username))
         return res.status(400).json(factoryResponse(400, `Username ${username} already exists`));
 

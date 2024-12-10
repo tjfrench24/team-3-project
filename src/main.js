@@ -30,9 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document
         .getElementById("register")
         .addEventListener("click", () => {
-            register();
+            //register();
             navigate('registrationView');
         });
+    document
+        .getElementById("registerButton")
+        .addEventListener("click", () => {
+            register();
+        })
     document
         .getElementById("loginWithGoogle")
         .addEventListener("click", () => {
@@ -113,9 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const username = document.getElementById("loginUsername").value;
         const password = document.getElementById("loginPassword").value;
         const response = await fetch("/loginWithGoogle", {
-        method: "POST",
+        method: "GET",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, password }),
+        //body: JSON.stringify({ username, password }),
         });
         const data = await response.json();
         console.log(JSON.stringify(data, null, 2));
