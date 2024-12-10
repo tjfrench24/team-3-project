@@ -8,14 +8,17 @@ class CardioRoutes {
   }
 
   initializeRoutes() {
+    // get route to get all cardio sessions 
     this.router.get("/cardios", async (req, res) => {
       await CardioController.getAllCardio(req, res);
     });
 
+    // post route to add a new cardio session 
     this.router.post("/cardio", async (req, res) => {
       await CardioController.addCardio(req, res);
     });
  
+    // delete route to clear all cardio sessions 
     this.router.delete("/cardios", async (req, res) => {
       await CardioController.clearCardio(req, res);
     });
