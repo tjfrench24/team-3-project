@@ -15,7 +15,7 @@ passport.use(
         {
             clientID: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-            callbackURL: "auth/google/callback",
+            callbackURL: "http://127.0.0.1:3000/auth/google/callback",
         },
          
         //called when user is authenticated with Google,

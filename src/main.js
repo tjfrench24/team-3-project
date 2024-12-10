@@ -33,9 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
             register();
             navigate('registrationView');
         });
-        document
+    document
         .getElementById("loginWithGoogle")
         .addEventListener("click", () => {
+            
             loginWithGoogle();
             //navigate('registrationView');
         });
@@ -109,8 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     async function loginWithGoogle() {
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+        const username = document.getElementById("loginUsername").value;
+        const password = document.getElementById("loginPassword").value;
         const response = await fetch("/loginWithGoogle", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -120,6 +121,25 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(JSON.stringify(data, null, 2));
         alert(data.message);
         window.location.href = '/auth/google';
+
+    }
+
+    async function googleSignIn(googleUser) {
+        const profile = googleUser.getBasicProfile();
+        const idToken = googleUser.getAuthResponse().id_token;
+
+        const response = await fetch ('/auth/google/callback', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({
+                idToken: idToken
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('User signed in through google:', data);
+        })
+        .catch(error => console.error('Error', error));
     }
 
     async function login() {
