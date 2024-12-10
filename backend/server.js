@@ -1,37 +1,40 @@
-// handle HTTP requests with express package 
-//const express = require('express');
+// Server.js
 import express from 'express';
-// handle request data with middleware 
-//const bodyParser = require('body-parser');
-import bodyParser from 'body-parser';
-// import routes 
-//const workoutRoutes = require('./routes/workoutRoutes');
-import workoutRoutes from './routes/workoutRoutes.js';
-//const cardioRoutes = require('./routes/cardioRoutes');
-//import cardioRoutes from './routes/cardioRoutes'
-// import sequelize instance 
-//const db = require('./database/sequelize');
-import { sequelize } from './database/sequelize.js';
-//create instance of express 
-const app = express();
-app.use((req,res,next)=>{
-  console.log(`${req.method} ${req.url}`);
-  next();
-})
-app.use(express.static('../../src'))
-// use bodyParser middleware with json method 
-app.use(bodyParser.json()); 
+import WorkoutRoutes from './routes/workoutRoutes.js';
+import CardioRoutes from './routes/cardioRoutes.js'; 
 
-// set up routes
-app.use('/workouts', workoutRoutes);
-//app.use('/cardio', cardioRoutes); 
+class Server {
+  constructor() {
+    this.app = express();
+    this.configureMiddleware();
+    this.setupRoutes();
+  }
 
-// connect to the database
-sequelize.sync()
-  .then(() => console.log('Connected to database'))
-  .catch(e => console.log('Error connecting to the database:', e));
+  // Configure middleware for static files and JSON parsing
+  configureMiddleware() {
+    // Serve static files from frontend
+    this.app.use(express.static('../src'));
 
-// start the server
-app.listen(5000, () => {
-  console.log('Running server on port 5000');
-});
+    // Parse JSON bodies with a limit of 10mb
+    this.app.use(express.json({ limit: '10mb' }));
+  }
+
+  // Setup routes
+  setupRoutes() {
+    // Set up routes for workouts and cardio
+    this.app.use('/v1/workouts', WorkoutRoutes);
+    this.app.use('/v1/cardio', CardioRoutes); 
+  }
+
+  // Start the server on a specified port
+  start(port = 3000) {
+    this.app.listen(port, () => {
+      console.log(`Server started on port ${port}`);
+    });
+  }
+}
+
+// Initialize and start the server
+console.log('Starting server...');
+const server = new Server();
+server.start();
