@@ -51,6 +51,11 @@ function loadProfileData() {
       const liftingLevel = document.createElement('p');
       liftingLevel.innerHTML = `<strong>Weight-Lifting Level:</strong> ${profileData.liftingLevel}`;
 
+      const goalsTitle = document.createElement('p');
+      goalsTitle.innerHTML = '<strong>Goals:</strong>';
+  
+      const goalsList = document.createElement('ul');
+
       profileDisplay.appendChild(height);
       profileDisplay.appendChild(weight);
       profileDisplay.appendChild(cardioLevel);
@@ -58,10 +63,6 @@ function loadProfileData() {
       profileDisplay.appendChild(goalsTitle);
       profileDisplay.appendChild(goalsList);
   
-      const goalsTitle = document.createElement('p');
-      goalsTitle.innerHTML = '<strong>Goals:</strong>';
-  
-      const goalsList = document.createElement('ul');
       const goal1 = document.createElement('li');
       goal1.textContent = profileData.goal1;
   

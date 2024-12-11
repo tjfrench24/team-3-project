@@ -63,6 +63,10 @@ export class FitnessProfileRepositoryService extends Service {
 
   // Load fitness profile from the database
   async loadFitnessProfileFromDB() {
+    if (!this.db) {
+      await this.initDB(); // Initialize the database if it's null
+    }
+    
     return new Promise((resolve, reject) => {
       const transaction = this.db.transaction([this.storeName], 'readonly');
       const store = transaction.objectStore(this.storeName);
