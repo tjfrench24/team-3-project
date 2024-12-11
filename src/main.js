@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await response.json();
         const message = JSON.parse(data.message);
 
+        //assigne fitness profile values based on database data
         document.getElementById("height").value = message.height;
         document.getElementById("weight").value = message.weight;
         document.getElementById("cardioLevel").value = message.cardioLevel;
@@ -146,7 +147,9 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(data.message);
     }
 
+    // save fitness profile
     async function saveProfile() {
+        // create object to send back to frontend
         const height = document.getElementById("height").value;
         const weight = document.getElementById("weight").value;
         const cardioLevel = document.getElementById("cardioLevel").value;
@@ -155,14 +158,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const goal2 = document.getElementById("goal2").value;
         const goal3 = document.getElementById("goal3").value;
 
-        console.log(JSON.stringify({ height, weight, cardioLevel, liftingLevel, goal1, goal2, goal3 }));
+        // create fetch request
         const response = await fetch("http://localhost:3001/saveProfile", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ height, weight, cardioLevel, liftingLevel, goal1, goal2, goal3 }),
         });
         const data = await response.json();
-        console.log(JSON.stringify(data, null, 2));
     }
 
 });

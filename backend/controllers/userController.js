@@ -40,6 +40,7 @@ export const login = async (req, res, next) => {
 
     // Log user in using req.login() function provided by passport
     // establishes login session for the user
+    // message contains user information from database used to fill the fitness profile
     req.login(user, (err) => 
         err ? next(err) : res.json(factoryResponse(200, user))
     );
@@ -47,9 +48,9 @@ export const login = async (req, res, next) => {
 
 export const saveProfile = async (req, res) => {
     console.log("entered save Profile");
+
+    //alter user in db
     const { height, weight, cardioLevel, liftingLevel, goal1, goal2, goal3 } = req.body; 
-    // if (await existsUser(username))
-    //     return res.status(400).json(factoryResponse(400, `Username ${username} already exists`));
     user.height = height
     user.weight = weight
     user.cardioLevel = cardioLevel
@@ -58,7 +59,7 @@ export const saveProfile = async (req, res) => {
     user.goal2 = goal2
     user.goal3 = goal3
 
-
+    //save to db
     await user.save();
     res.json(factoryResponse(200, "profile save successful"));
 };
@@ -79,7 +80,7 @@ export const loginWithGoogle = (req, res) => {
     res.redirect("/auth/google");
 };
 
-//Profile route
+//Profile route 
 export const getProfile = (req, res) => {
     res.json(factoryResponse(200, `Welcome, ${req.user.username}`));
   };
