@@ -40,8 +40,8 @@ class _InMemoryWorkoutModel {
   }
 
 // initialize with example workouts 
-InMemoryWorkoutModel.create({ workout: "Pushups" });
-InMemoryWorkoutModel.create({ workout: "Squats"});
+//const InMemoryWorkoutModel = new _InMemoryWorkoutModel();
+// InMemoryWorkoutModel.create({ workout: "Pushups" });
+// InMemoryWorkoutModel.create({ workout: "Squats"});
   
-const InMemoryWorkoutModel = new _InMemoryWorkoutModel();
-export default InMemoryWorkoutModel;
+export default _InMemoryWorkoutModel;
