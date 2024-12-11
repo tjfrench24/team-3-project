@@ -1,6 +1,5 @@
 import ModelFactory from "../models/MemoryFactory.js";
 
-
 class WorkoutController {
   constructor() {
     ModelFactory.getModel().then((model) => {

@@ -1,6 +1,5 @@
 import ModelFactory from "../models/MemoryFactory.js";
 
-
 class CardioController {
   constructor() {
     ModelFactory.getModel().then((model) => {
