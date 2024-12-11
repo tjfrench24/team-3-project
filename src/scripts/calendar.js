@@ -1,4 +1,4 @@
-import { initializeWorkouts } from "./workout.js";
+import { workouts, initializeWorkouts } from "./workout.js";
 const monthNames = [
     "January",
     "February",
@@ -51,14 +51,24 @@ const monthNames = [
       theGrid.appendChild(emptySquare);
     }
   }
-  export function addTodayWorkout(){
-    let grid = document.getElementById("theGrid")
-    grid.addEventListener("click",e=>{
-      let today = new Date()
-      if(e.target.textContent == today.getDate()){
-        document.getElementById("calendarView").style.display = 'none'
-        document.getElementById("workoutView").style.display = 'block'
-        initializeWorkouts()
+  export function addWorkoutForSelectedDay() {
+    const grid = document.getElementById("theGrid");
+    grid.addEventListener("click", (e) => {
+      if (!isNaN(e.target.textContent)) { // Ensure a valid date was clicked
+        const selectedDay = e.target.textContent;
+        const today = new Date();
+        const selectedDate = new Date(today.getFullYear(), today.getMonth(), selectedDay);
+        const formattedDate = selectedDate.toISOString().split("T")[0]; // Format as YYYY-MM-DD
+  
+        // Filter workouts for the selected date
+        const filteredWorkouts = workouts.filter((workout) => workout.date === formattedDate);
+  
+        // Navigate to the workout view regardless of whether workouts exist
+        document.getElementById("calendarView").style.display = "none";
+        document.getElementById("workoutView").style.display = "block";
+  
+        // Pass only filtered workouts to initializeWorkouts
+        initializeWorkouts(filteredWorkouts);
       }
-    })
+    });
   }
