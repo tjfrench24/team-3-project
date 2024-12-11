@@ -1,12 +1,12 @@
 // workout.js
-import {workoutData} from '../../backend/models/workoutData.js'
+import {workoutData} from './workoutData.js'
 
 let totalCalories = 0;
 
 async function saveWorkoutDatabase(data){
   try{
     console.log('Sending data',data)
-    let response = await fetch("http://localhost:5000/workouts/save",{
+    let response = await fetch("http://localhost:3000/workouts/save",{
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body:JSON.stringify(data)
