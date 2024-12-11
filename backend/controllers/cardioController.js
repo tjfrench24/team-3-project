@@ -1,5 +1,4 @@
-import ModelFactory from "../model/ModelFactory.js";
-import Cardio from '../models/cardio.js';
+import ModelFactory from "../models/MemoryFactory.js";
 
 class CardioController {
   constructor() {
