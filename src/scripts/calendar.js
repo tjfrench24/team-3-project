@@ -1,4 +1,3 @@
-import { initializeWorkouts } from "./workout.js";
 const monthNames = [
     "January",
     "February",
@@ -54,11 +53,7 @@ const monthNames = [
   export function addTodayWorkout(){
     let grid = document.getElementById("theGrid")
     grid.addEventListener("click",e=>{
-      let today = new Date()
-      if(e.target.textContent == today.getDate()){
-        document.getElementById("calendarView").style.display = 'none'
-        document.getElementById("workoutView").style.display = 'block'
-        initializeWorkouts()
-      }
+      document.getElementById("calendarView").style.display = 'none'
+      document.getElementById("workoutView").style.display = 'block'
     })
   }

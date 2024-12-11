@@ -1,56 +1,47 @@
-// import the Workout model 
-//const Workout = require('../models/Workouts');
+import ModelFactory from "../model/ModelFactory.js";
 import Workout from '../models/workouts.js';
 
-// function to create a new workout
-export const logWorkout = async (req, res) => {
-  const {workout, weight, reps, sets} = req.body;
-  // create a new workout in the database
-  const newWorkout = await Workout.create({workout, weight, reps, sets});
-  // 201 indicates success in creating a new workout 
-  res.status(201).json(newWorkout);
-};
+class WorkoutController {
+  constructor() {
+    ModelFactory.getModel().then((model) => {
+      this.model = model; 
+    });
+  }
+  
+  // get all workouts 
+  async getAllWorkouts(req, res) {
+      const workouts = await this.model.read();
+      res.json({ workouts });
+  }
 
-// function for deleting a workout by id 
-export const deleteWorkout = async (req, res) => {
-  const {id} = req.params;  
-  // delete the workout by ID
-  const deletedWorkout = await Workout.destroy({where: {id}});
-  // show message if the workout doesn't exist 
-  if (!deletedWorkout) return res.status(404).json({message: 'Workout does not exist'});
-  // message to show workout was deleted (200 used because message is included, something is retrieved)
-  res.status(200).json({message: 'Workout deleted successfully'});
-};
+  // add a new workout 
+  async addWorkout(req, res) {
+    try {
+      if (!req.body || !req.body.workout || !req.body.duration) {
+        return res.status(400).json({ error: "Workout description is required." });
+      }
 
-// function to get all workouts from the database
-export const getAllWorkouts = async (req, res) => {
-  const workouts = await Workout.findAll();
-  // 200 indicates success in retrieivng workouts 
-  res.status(200).json(workouts);
-};
+      // Create the new workout object with a unique ID
+      const workout = await this.model.create(req.body);
 
-// function to aggregate all reps and sets for each workout to show lifetime totals
-export const getWorkoutSummary = async (req, res) => {
-  const summary = await Workout.findAll({
-    attributes: [
-      // get total sets for specific workout 
-      [sequelize.fn('sum', sequelize.col('sets')), 'totalSets'], 
-      // get total reps for specific workout 
-      [sequelize.fn('sum', sequelize.col('reps')), 'totalReps'], 
-    ],
-    // only want to see data from database 
-    raw: true,
-  });
-  // 200 indicates success in retrieving workout summary
-  res.status(200).json(summary);
-};
+      console.log(`New Workout: ${workout.id} - ${workout.workout}`);
 
-// module.exports = {
-//   logWorkout,
-//   deleteWorkout,
-//   getAllWorkouts,
-//   getWorkoutSummary,
-// };
-//export {logWorkout, deleteWorkout, getAllWorkouts, getWorkoutSummary};
+       // Send back the created workout as the response
+      return res.status(201).json(workout);
+    } catch (error) {
+      // Log any unexpected errors and send a server error response
+      console.error("Error adding workout:", error);
+      return res
+        .status(500)
+        .json({ error: "Failed to add workout. Please try again." });
+  }
+  }
 
-export default Workout;  
+  // clear all workouts 
+   async clearWorkouts(req, res) {
+    await this.model.delete();
+    res.json(await this.model.read());
+  }
+}
+
+export default new WorkoutController();
