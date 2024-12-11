@@ -3,7 +3,6 @@ import { buildCalendar } from "./scripts/calendar.js";
 import { initializeWorkouts, toggleComplete } from "./scripts/workout.js";
 import { initHomeView } from "./home.js";
 import { addTodayWorkout } from "./scripts/calendar.js";
-//import { login, logout, loginWithGoogle, register } from "../backend/controllers/userController.js";
 
 let currentDate = new Date();
 
@@ -38,13 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .addEventListener("click", () => {
             register();
         })
-    document
-        .getElementById("loginWithGoogle")
-        .addEventListener("click", () => {
-            
-            loginWithGoogle();
-            //navigate('registrationView');
-        });
     
     document
         .getElementById("home")
@@ -65,8 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .getElementById("logoutButton")
         .addEventListener("click", () => {
             logout();
-            //navigate('loginView');
-            
     });
 
     const loginForm = document.getElementById("loginForm");
@@ -113,22 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(JSON.stringify(data, null, 2));
         alert(data.message);
     }
-
-    async function loginWithGoogle() {
-        const username = document.getElementById("loginUsername").value;
-        const password = document.getElementById("loginPassword").value;
-        const response = await fetch("/loginWithGoogle", {
-        method: "GET",
-        headers: { "Content-Type": "application/json" },
-        //body: JSON.stringify({ username, password }),
-        });
-        const data = await response.json();
-        console.log(JSON.stringify(data, null, 2));
-        alert(data.message);
-        window.location.href = '/auth/google';
-
-    }
-
 
     async function login() {
         const username = document.getElementById("loginUsername").value;

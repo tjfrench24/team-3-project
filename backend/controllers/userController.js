@@ -8,10 +8,10 @@ dotenv.config();
 //Helper
 const factoryResponse = (status, message) => ({ status, message });
 
-const existsUser = async (username) => {
-    const user = await User.findOne({ where: { username }});
-    return user;
-};
+// const existsUser = async (username) => {
+//     const user = await User.findOne({ where: { username }});
+//     return user;
+// };
 
 // Registration route
 // Creates a new user in the database
@@ -64,18 +64,6 @@ export const logout = (req, res) => {
 
 export const loginWithGoogle = (req, res) => {
     res.redirect("/auth/google");
-};
-
-
-// Google auth callback route
-// Called by google after user has authenticated
-export const googleAuthCallback = (req, res) => {
-    res.redirect("/");
-};
-
-// Admin area route
-export const getAdminArea = (req, res) => {
-    res.json(factoryResponse(200, "Welcome to the admin area"));
 };
 
 //Profile route
