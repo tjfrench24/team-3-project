@@ -6,9 +6,4 @@ const sequelize = new Sequelize({
   storage: './database.sqlite', // shows where to create the database file 
 });
 
-// sequelize.sync().then(() => {
-//   console.log("Database synced");
-// }).catch(err => console.error("error syncing database: ", err));
-
-//module.exports = sequelize;
 export default sequelize;  

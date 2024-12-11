@@ -1,67 +1,58 @@
-import express from "express";
+
+// Server.js
+import express from 'express';
+import WorkoutRoutes from './routes/workoutRoutes.js';
+import CardioRoutes from './routes/cardioRoutes.js'; 
 import session from "express-session";
-import passport from "./auth/passport.js";
 import sessionRoute from "./routes/sessionRoute.js";
-// handle HTTP requests with express package 
-// handle request data with middleware 
-import bodyParser from 'body-parser';
-import workoutRoutes from './routes/workoutRoutes.js'
-import cardioRoutes from './routes/cardioRoutes.js'
-import cors from 'cors';
-// import routes 
-// const workoutRoutes = require('./routes/workoutRoutes');
-// const cardioRoutes = require('./routes/cardioRoutes');
-// import sequelize instance 
-import db from './database/sequelize.js';
-//const db = require('./database/sequelize');
+import cors from "cors";
 
-//create instance of express 
-const app = express();
-app.use(cors());
+class Server {
+  constructor() {
+    this.app = express();
+    this.app.use(cors());
+    this.configureMiddleware();
+    this.setupRoutes();
+    this.app.use( //configure session management
+      session({
+        secret: process.env.SESSION_SECRET,
+        resave: false,
+        saveUninitialized: false,
+      })
+    );
 
-// Configure static file serving
-app.use(express.static("public"));
+  }
 
-// Configure the Express application
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
-// Configure session management.
-// This is required to persist the login session across requests.
-// The session data is stored in memory by default, but you can also
-// store it in a database or a cache for better scalability.
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false,
-  })
-);
+  // Configure middleware for static files and JSON parsing
+  configureMiddleware() {
+    // Serve static files from frontend
+    this.app.use(express.static('../src'));
 
-// Initialize Passport and restore authentication state, if any, from the
-// session. This allows you to keep a user's authentication state across
-// requests.
-app.use(passport.initialize());
-app.use(passport.session());
+    // Parse JSON bodies with a limit of 10mb
+    this.app.use(express.json({ limit: '10mb' }));
+  }
 
-// Use routes from routes.js
-app.use("/", sessionRoute);
+  // Setup routes
+  setupRoutes() {
+    // Set up routes for workouts and cardio
+    this.app.use('/v1/workouts', WorkoutRoutes);
+    this.app.use('/v1/cardio', CardioRoutes); 
+    this.app.use("/", sessionRoute);
+  }
 
-// use bodyParser middleware with json method 
-app.use(bodyParser.json()); 
 
-// set up routes
-app.use('/workouts', workoutRoutes);
-app.use('/cardio', cardioRoutes); 
+  // Start the server on a specified port
+  start(port = 3001) {
+    this.app.listen(port, () => {
+      console.log(`Server started on port ${port}`);
+    });
+  }
+}
 
-// connect to the database
-db.sync()
-  .then(() => console.log('Connected to database'))
-  .catch(e => console.log('Error connecting to the database:', e));
+// Initialize and start the server
+console.log('Starting server...');
+const server = new Server();
+server.start();
 
-// start the server
-app.listen(3001, () => {
-  console.log('Running server on port 3001');
-});
-
-export default app;
+//export default app;

@@ -79,18 +79,6 @@ export const loginWithGoogle = (req, res) => {
     res.redirect("/auth/google");
 };
 
-
-// Google auth callback route
-// Called by google after user has authenticated
-export const googleAuthCallback = (req, res) => {
-    res.redirect("/");
-};
-
-// Admin area route
-export const getAdminArea = (req, res) => {
-    res.json(factoryResponse(200, "Welcome to the admin area"));
-};
-
 //Profile route
 export const getProfile = (req, res) => {
     res.json(factoryResponse(200, `Welcome, ${req.user.username}`));
