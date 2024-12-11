@@ -59,11 +59,17 @@ Top 3 Commits for Milestone 3:
 ## Megan Greene - Notetaker
 - Role: Responsible for taking notes during meetings and making sure anyone who wasn't available knows everything that was discussed. Responsible with communicating with the group about anything they missed. 
 
-Top 3 Commits:
+Top 3 Commits for Milestone 3:
 - Commit 1: https://github.com/tjfrench24/team-3-project/commit/9dfdf1a863302ea3dbfc622ae6ec9298ca52d1f3, https://github.com/tjfrench24/team-3-project/commit/a14910f7a148ccd7aac79c5a380a08fd74d6a244, https://github.com/tjfrench24/team-3-project/commit/4d490f28418da3b24698ef290f79d550de1ca2bb: Edited the home page and enhanced the login so that the rest of the app is unavailable until login and after logging out
 
 - Commit 2: https://github.com/tjfrench24/team-3-project/commit/687d251802ad16c3078b0dcda6ca129528ce844c, https://github.com/tjfrench24/team-3-project/commit/a95d066a47b844b732611ee914638d24e4867c24, https://github.com/tjfrench24/team-3-project/commit/7379b3c402ec7ac8369d30269ef17222f2cd1330, https://github.com/tjfrench24/team-3-project/commit/bfaef7749acdc10578e89a4828a7c12a9ec66231: Added the scaffolding of the code and added required files
 - Commit 3: https://github.com/tjfrench24/team-3-project/commit/4d490f28418da3b24698ef290f79d550de1ca2bb: Created a feature sequence diagram for the login enablement feature
+
+Top 3 commits for Milestone 4:
+Commit 1:https://github.com/tjfrench24/team-3-project/commit/a25c35304274bee70190e1dda65471065a174e28 : Added many necessary files and dependencies and reorganized files. Created package.json and installed dependencies for backend
+Commit 2: https://github.com/tjfrench24/team-3-project/commit/d2703671a17b2d99d1d5cac6cb56c0ec19f1930f, https://github.com/tjfrench24/team-3-project/commit/2b9b353d90bd3e2a5c9c89d4214c909764043105, https://github.com/tjfrench24/team-3-project/commit/25d7cd764e2f53c1951caa27b077a07040735e55: All these together include adding a registration page and buttons as well as configuring the database and getting the registration, login, and logout features to work
+
+Commit 3: https://github.com/tjfrench24/team-3-project/commit/91dc0ecaeccfb5e9fe882914e25a824e0a8f50df : Completed the registration and login feature to work without error
 
 ## Tuosheng Jiao - Architects
 - **Role**: Responsible for the planning of the overall technical implementation of the project, ensuring that each feature is developed in line with the design expectations and correctly solves the defined problems.
