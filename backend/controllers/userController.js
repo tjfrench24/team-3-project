@@ -10,19 +10,11 @@ const factoryResponse = (status, message) => ({ status, message });
 
 let user = {}
 
-const existsUser = async (username) => {
-    const user = await User.findOne({ where: { username }});
-    return user;
-};
-
 // Registration route
 // Creates a new user in the database
 export const register = async (req, res) => {
-    //check if username taken
+    
     const { username, password } = req.body; 
-    // if (await existsUser(username))
-    //     return res.status(400).json(factoryResponse(400, `Username ${username} already exists`));
-
     const hash = await bcrypt.hash(password, 10);
     await User.create({ username, password: hash});
     res.json(factoryResponse(200, "Registration successful"));

@@ -4,9 +4,6 @@ import {
     login,
     logout,
     saveProfile,
-    googleAuthCallback,
-    getAdminArea,
-    getProfile,
 } from "../controllers/userController.js";
 
 const router = express.Router();
