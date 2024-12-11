@@ -1,4 +1,4 @@
-import { fitnessProfileService } from './services/FitnessProfileRepositoryService.js';
+import { fitnessProfileService } from '../services/FitnessProfileRepositoryService.js';
 
 document.addEventListener("DOMContentLoaded", () => {
     // event listener for saving profile

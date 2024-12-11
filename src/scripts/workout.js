@@ -1,5 +1,5 @@
 // workout.js
-import {workoutData} from '../../backend/models/workoutData.js'
+import { workoutData } from './workoutData.js';
 
 let totalCalories = 0;
 
