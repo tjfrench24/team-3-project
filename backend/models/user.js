@@ -19,8 +19,10 @@ const User = sequelize.define("User", {
   role: { type: DataTypes.STRING, defaultValue: "user" }, // Roles: 'user', 'admin'
 });
 
-// Create the table if it doesn't exist
-await sequelize.sync();
+//Create the table if it doesn't exist
+sequelize.sync().then(() => {
+  console.log("Database synced");
+}).catch(err => console.error("error syncing database: ", err));
 
 // Export the User model for use in other files
 export default User;

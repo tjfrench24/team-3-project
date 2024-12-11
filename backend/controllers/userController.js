@@ -17,12 +17,14 @@ const existsUser = async (username) => {
 // Creates a new user in the database
 export const register = async (req, res) => {
     //check if username taken
+    console.log("entered backend register");
     const { username, password } = req.body; 
     console.log("Backend:",username);
-    if (await existsUser(username))
-        return res.status(400).json(factoryResponse(400, `Username ${username} already exists`));
+    // if (await existsUser(username))
+    //     return res.status(400).json(factoryResponse(400, `Username ${username} already exists`));
 
     const hash = await bcrypt.hash(password, 10);
+    console.log("Backend password: ", password);
     await User.create({ username, password: hash});
     res.json(factoryResponse(200, "Registration successful"));
     console.log("User registered successfully");
