@@ -19,8 +19,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     initHomeView();
     document
-        .getElementById("login")
-        .addEventListener("click", () => navigate("loginView"));
+        .getElementById("loginButton")
+        .addEventListener("click", () => {
+            login();
+            //navigate("homeView");
+            toggleButtons(false);
+        });
+
+    document
+        .getElementById("register")
+        .addEventListener("click", () => {
+            //register();
+            navigate('registrationView');
+        });
+    document
+        .getElementById("registerButton")
+        .addEventListener("click", () => {
+            register();
+        })
+    
     document
         .getElementById("home")
         .addEventListener("click", () => {
@@ -37,23 +54,20 @@ document.addEventListener("DOMContentLoaded", () => {
         .getElementById("profile")
         .addEventListener("click", () => navigate("profileView"));
     document
-    .getElementById("logout")
-    .addEventListener("click", () => {
-      navigate("loginView");
-      toggleButtons(true);
-      document.getElementById("username").value = '';
-      document.getElementById("password").value = '';
+        .getElementById("logoutButton")
+        .addEventListener("click", () => {
+            logout();
     });
 
     const loginForm = document.getElementById("loginForm");
     if (loginForm) {
         loginForm.addEventListener("submit", (event) => {
         event.preventDefault();
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
+        const username = document.getElementById("loginUsername").value;
+        const password = document.getElementById("loginPassword").value;
         if (username && password) {
             alert(`Welcome, ${username}!`);
-            navigate("homeView");
+            //navigate("homeView");
             initHomeView();
             toggleButtons(false);
         } else {
@@ -74,4 +88,47 @@ document.addEventListener("DOMContentLoaded", () => {
     window.toggleComplete = toggleComplete;
     addTodayWorkout()
     navigate("loginView");
+
+
+    async function register() {
+        const username = document.getElementById("registerUsername").value;
+        const password = document.getElementById("registerPassword").value;
+        const response = await fetch("http://localhost:3001/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+        });
+        const data = await response.json();
+        if(response.status === 200) navigate("loginView");
+        console.log(JSON.stringify(data, null, 2));
+        alert(data.message);
+    }
+
+    async function login() {
+        const username = document.getElementById("loginUsername").value;
+        const password = document.getElementById("loginPassword").value;
+        console.log(username, password);
+        const response = await fetch("http://localhost:3001/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+        });
+        const data = await response.json();
+        if(response.status === 200) navigate("homeView");
+        console.log(JSON.stringify(data, null, 2));
+        alert(data.message);
+    }
+
+    async function logout() {
+        const response = await fetch("/logout");
+        const data = await response.json();
+        if(response.status === 200) {
+            navigate("loginView");
+            toggleButtons(true);
+            document.getElementById("loginUsername").value = '';
+            document.getElementById("loginPassword").value = '';
+        }
+        console.log(JSON.stringify(data, null, 2));
+        alert(data.message);
+    }
 });

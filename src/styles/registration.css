@@ -1,16 +1,17 @@
-#loginForm {
+#registrationForm {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 300px;
     margin: 0 auto;
-    padding: 30px;
-    background-color: #fff;
+    padding: 20px;
+    height: 50vh;
+    background-color: #6cf570;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(203, 243, 203, 0.1);
   }
   
-  #loginForm input {
+  #registrationForm input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -18,30 +19,29 @@
     border-radius: 5px;
     font-size: 14px;
   }
+
   
-  #loginForm button {
+  #registrationForm button {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #2bbf2b;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    margin-bottom: 4px;
-    margin-top: 3px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
-  #loginForm button:hover {
-    background-color: #0056b3;
+  #registrationForm button:hover {
+    background-color: #23961f;
   }
   
-  #loginView {
+  #registrationView {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 100vh;
   }
   

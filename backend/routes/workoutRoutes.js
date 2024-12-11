@@ -30,3 +30,4 @@ class WorkoutRoutes {
 }
 
 export default new WorkoutRoutes().getRouter();
+

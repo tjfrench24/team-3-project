@@ -1,4 +1,5 @@
 import ModelFactory from "../model/ModelFactory.js";
+import Workout from '../models/workouts.js';
 
 class WorkoutController {
   constructor() {
