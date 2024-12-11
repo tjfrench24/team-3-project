@@ -58,7 +58,7 @@ const monthNames = [
         const selectedDay = e.target.textContent;
         const today = new Date();
         const selectedDate = new Date(today.getFullYear(), today.getMonth(), selectedDay);
-        const formattedDate = selectedDate.toISOString().split("T")[0]; // Format as YYYY-MM-DD
+        const formattedDate = selectedDate.toISOString().split("T")[0];
   
         // Filter workouts for the selected date
         const filteredWorkouts = workouts.filter((workout) => workout.date === formattedDate);

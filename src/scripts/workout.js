@@ -5,7 +5,7 @@ export const workouts = [
 ];
 
 let totalCalories = 0;
-//initialize exercise plan
+//Initialize exercise plan
 export function initializeWorkouts(filteredWorkouts = []) {
   const workList = document.getElementById("workout-list");
   workList.innerHTML = ''; // Clear previous workouts
@@ -24,7 +24,6 @@ export function initializeWorkouts(filteredWorkouts = []) {
       workList.appendChild(e);
     });
   } else {
-    // Optionally, leave the list empty or handle empty state here
     workList.innerHTML = "<p>No workouts scheduled for this day.</p>";
   }
 }
