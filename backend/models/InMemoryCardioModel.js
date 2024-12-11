@@ -41,8 +41,8 @@ class _InMemoryCardioModel {
   }
 
 // initialize with cardio examples 
-InMemoryCardioModel.create({ cardio: "Jog", duration: null, distance: null });
-InMemoryCardioModel.create({ cardio: "jump rope", duration: null, distance: null });
+// InMemoryCardioModel.create({ cardio: "Jog", duration: null, distance: null });
+// InMemoryCardioModel.create({ cardio: "jump rope", duration: null, distance: null });
   
-const InMemoryCardioModel = new _InMemoryCardioModel();
-export default InMemoryCardioModel;
+//const InMemoryCardioModel = new _InMemoryCardioModel();
+export default _InMemoryCardioModel;

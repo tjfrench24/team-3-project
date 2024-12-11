@@ -5,6 +5,7 @@ import WorkoutRoutes from './routes/workoutRoutes.js';
 import CardioRoutes from './routes/cardioRoutes.js'; 
 import session from "express-session";
 import sessionRoute from "./routes/sessionRoute.js";
+import cors from "cors";
 
 class Server {
   constructor() {
@@ -54,4 +55,4 @@ console.log('Starting server...');
 const server = new Server();
 server.start();
 
-export default app;
+//export default app;
