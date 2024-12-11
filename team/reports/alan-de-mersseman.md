@@ -18,6 +18,10 @@ Filled out stand-up meeting form #4 because Notetaker was absent
 - Details: Made the initial rough draft for the front end of the calendar tracking page meaning I created the initial grid layout and styling including numbering days and labelling months of calendar.
 - Link: https://github.com/tjfrench24/team-3-project/commit/8c0c0b47b4299415e0ddd8b70ca016fe84e08be0
 
-## novermber 17, 2024
+## Novermber 17, 2024
 - Task: Created feature sequence diagram for Workout Calendar page
 - Link: https://github.com/tjfrench24/team-3-project/commit/7ab1c109b98703397eea3972c2f8f640c43795a5#diff-c237f166d43157897ea24e1bf29970b8b5f8baf952d9f991f7ac8c92300e08cd
+
+## December 10, 2025
+- Task: Integrated user profile with back end allowing users to save personal fitness information
+- Link: https://github.com/tjfrench24/team-3-project/pull/49/commits/1a08fff478f9ce87976b578f49489abdfc84c6ec

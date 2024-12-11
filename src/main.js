@@ -45,6 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
           initHomeView();
         });
     document
+        .getElementById("saveProfileButton")
+        .addEventListener("click", () => {
+            saveProfile();
+        });
+
+
+    document
         .getElementById("calendar")
         .addEventListener("click", () => navigate("calendarView", currentDate, buildCalendar));
     document
@@ -107,16 +114,24 @@ document.addEventListener("DOMContentLoaded", () => {
     async function login() {
         const username = document.getElementById("loginUsername").value;
         const password = document.getElementById("loginPassword").value;
-        console.log(username, password);
+        console.log(username, password)
         const response = await fetch("http://localhost:3001/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
         });
         const data = await response.json();
+        const message = JSON.parse(data.message);
+
+        //assigne fitness profile values based on database data
+        document.getElementById("height").value = message.height;
+        document.getElementById("weight").value = message.weight;
+        document.getElementById("cardioLevel").value = message.cardioLevel;
+        document.getElementById("liftingLevel").value = message.liftingLevel;
+        document.getElementById("goal1").value = message.goal1;
+        document.getElementById("goal2").value = message.goal2;
+        document.getElementById("goal3").value = message.goal3;
         if(response.status === 200) navigate("homeView");
-        console.log(JSON.stringify(data, null, 2));
-        alert(data.message);
     }
 
     async function logout() {
@@ -131,4 +146,25 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(JSON.stringify(data, null, 2));
         alert(data.message);
     }
+
+    // save fitness profile
+    async function saveProfile() {
+        // create object to send back to frontend
+        const height = document.getElementById("height").value;
+        const weight = document.getElementById("weight").value;
+        const cardioLevel = document.getElementById("cardioLevel").value;
+        const liftingLevel = document.getElementById("liftingLevel").value;
+        const goal1 = document.getElementById("goal1").value;
+        const goal2 = document.getElementById("goal2").value;
+        const goal3 = document.getElementById("goal3").value;
+
+        // create fetch request
+        const response = await fetch("http://localhost:3001/saveProfile", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ height, weight, cardioLevel, liftingLevel, goal1, goal2, goal3 }),
+        });
+        const data = await response.json();
+    }
+
 });
