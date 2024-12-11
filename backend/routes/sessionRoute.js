@@ -5,6 +5,7 @@ import {
     register,
     login,
     logout,
+    saveProfile,
     googleAuthCallback,
     getAdminArea,
     getProfile,
@@ -20,6 +21,7 @@ router.post("/register", register);
 router.post("/loginWithGoogle", loginWithGoogle);
 router.post("/login", login);
 router.get("/logout", logout);
+router.post("/saveProfile", saveProfile);
 
 
 //Google Auth routes
