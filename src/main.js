@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document
         .getElementById("loginButton")
         .addEventListener("click", () => {
-            login();
-            //navigate("homeView");
+            //login();
+            navigate("homeView");
             toggleButtons(false);
         });
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .getElementById("registerButton")
         .addEventListener("click", () => {
             register();
-            //navigate("loginView");
+            //navigate("homeView");
         })
     
     document
@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         const data = await response.json();
         if(response.status = 200) {
+            console.log("Registration successful");
             navigate("loginView");
             toggleButtons(false);
         }
