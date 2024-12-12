@@ -1,4 +1,3 @@
-// Server.js
 import express from "express";
 import WorkoutRoutes from "./routes/workoutRoutes.js";
 import CardioRoutes from "./routes/cardioRoutes.js";
@@ -14,7 +13,6 @@ class Server {
     this.configureMiddleware();
     this.setupRoutes();
     this.app.use(
-      //configure session management
       session({
         secret: process.env.SESSION_SECRET,
         resave: false,
@@ -29,7 +27,6 @@ class Server {
     });
   }
 
-  // Configure middleware for static files and JSON parsing
   configureMiddleware() {
     // Serve static files from frontend
     this.app.use(express.static("../src"));
@@ -38,7 +35,6 @@ class Server {
     this.app.use(express.json({ limit: "10mb" }));
   }
 
-  // Setup routes
   setupRoutes() {
     // Set up routes for workouts and cardio
     this.app.use("/v1/workouts", WorkoutRoutes);
@@ -47,7 +43,6 @@ class Server {
     this.app.use("/v1/progress", ProgressRoutes);
   }
 
-  // Start the server on a specified port
   start(port = 3001) {
     this.app.listen(port, () => {
       console.log(`Server started on port ${port}`);

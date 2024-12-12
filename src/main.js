@@ -1,6 +1,5 @@
 import { navigate } from "./scripts/navigation.js";
 import { buildCalendar } from "./scripts/calendar.js";
-import { initializeWorkouts, toggleComplete } from "./scripts/workout.js";
 import { initHomeView } from "./home.js";
 import { addTodayWorkout } from "./scripts/calendar.js";
 
@@ -92,8 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         buildCalendar(currentDate);
     });
 
-    window.toggleComplete = toggleComplete;
-    addTodayWorkout()
+    addTodayWorkout();
     navigate("loginView");
 
 
@@ -166,5 +164,68 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         const data = await response.json();
     }
+
+    // Updated main.js
+    const API_URL = 'http://localhost:3001';
+
+    // Function to show workouts based on difficulty level and category
+    async function showWorkout(planId) {
+    try {
+        const res = await fetch(`${API_URL}/workouts?planId=${planId}`);
+        if (!res.ok) {
+        throw new Error('Failed to fetch workouts');
+        }
+        const workouts = await res.json();
+
+        const content = document.getElementById('workout-content');
+        content.innerHTML = workouts.map(workout => `
+        <div class="exercise-item">
+            <h3>${workout.name} (${workout.calories} calories)</h3>
+            <p>${workout.sets}</p>
+            <button onclick="addToSelected('${workout.name}', '${workout.sets}', ${workout.calories})">Add</button>
+        </div>
+        `).join('');
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Could not load workouts.');
+    }
+    }
+
+    // Function to save selected workouts
+    async function saveWorkout() {
+    const exercises = Array.from(document.getElementsByClassName('exercise-item')).map(item => ({
+        name: item.querySelector('h3').textContent.split(' (')[0],
+        sets: item.querySelector('p').textContent,
+        calories: parseInt(item.dataset.calories, 10),
+    }));
+
+    const data = {
+        workout: exercises,
+        weight: document.getElementById('userWeight').value,
+        muscleRate: document.getElementById('muscleRate').value,
+        totalCalories: document.getElementById('calories-count').textContent,
+    };
+
+    try {
+        const res = await fetch(`${API_URL}/workouts`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+        });
+
+        if (!res.ok) {
+        throw new Error('Failed to save workout');
+        }
+        alert('Workout saved successfully!');
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Could not save workout.');
+    }
+    }
+
+    // Hook up event listeners if needed
+    window.showWorkout = showWorkout;
+    window.saveWorkout = saveWorkout;
+
 
 });
