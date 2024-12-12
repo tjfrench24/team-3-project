@@ -8,7 +8,7 @@ dotenv.config();
 //Helper
 const factoryResponse = (status, message) => ({ status, message });
 
-let user = {}
+let user;
 
 // Registration route
 // Creates a new user in the database
@@ -22,7 +22,8 @@ export const register = async (req, res) => {
 };
 
 // Login route: checks credentials and logs them in
-export const login = async (req, res, next) => {    
+export const login = async (req, res, next) => {  
+    console.log("Entering login backend");  
     const { username, password } = req.body;
     user = await User.findOne({ where: { username }});
     if(!user || !(await bcrypt.compare(password, user.password))) {
@@ -34,7 +35,7 @@ export const login = async (req, res, next) => {
     // establishes login session for the user
     // message contains user information from database used to fill the fitness profile
     req.login(user, (err) => 
-        err ? next(err) : res.json(factoryResponse(200, user))
+        err ? next(err) : res.json(factoryResponse(200, "Login successful"))
     );
 };
 
@@ -66,10 +67,6 @@ export const logout = (req, res) => {
         user = {}
         res.json(factoryResponse(200, "Logout successful"));
     });
-};
-
-export const loginWithGoogle = (req, res) => {
-    res.redirect("/auth/google");
 };
 
 //Profile route 

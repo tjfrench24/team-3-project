@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .getElementById("registerButton")
         .addEventListener("click", () => {
             register();
+            //navigate("loginView");
         })
     
     document
@@ -63,7 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document
         .getElementById("logoutButton")
         .addEventListener("click", () => {
-            logout();
+            //logout();
+            navigate("loginView");
+            toggleButtons(true);
     });
 
     const loginForm = document.getElementById("loginForm");
@@ -106,7 +109,10 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({ username, password }),
         });
         const data = await response.json();
-        if(response.status === 200) navigate("loginView");
+        if(response.status = 200) {
+            navigate("loginView");
+            toggleButtons(false);
+        }
         console.log(JSON.stringify(data, null, 2));
         alert(data.message);
     }
@@ -114,24 +120,27 @@ document.addEventListener("DOMContentLoaded", () => {
     async function login() {
         const username = document.getElementById("loginUsername").value;
         const password = document.getElementById("loginPassword").value;
-        console.log(username, password)
+        //console.log(username, password)
         const response = await fetch("http://localhost:3001/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
         });
         const data = await response.json();
-        const message = JSON.parse(data.message);
 
-        //assigne fitness profile values based on database data
-        document.getElementById("height").value = message.height;
-        document.getElementById("weight").value = message.weight;
-        document.getElementById("cardioLevel").value = message.cardioLevel;
-        document.getElementById("liftingLevel").value = message.liftingLevel;
-        document.getElementById("goal1").value = message.goal1;
-        document.getElementById("goal2").value = message.goal2;
-        document.getElementById("goal3").value = message.goal3;
-        if(response.status === 200) navigate("homeView");
+        if(response.status === 200) {
+            navigate("homeView");
+            const message = JSON.parse(data.message);
+            //assigne fitness profile values based on database data
+            document.getElementById("height").value = message.height;
+            document.getElementById("weight").value = message.weight;
+            document.getElementById("cardioLevel").value = message.cardioLevel;
+            document.getElementById("liftingLevel").value = message.liftingLevel;
+            document.getElementById("goal1").value = message.goal1;
+            document.getElementById("goal2").value = message.goal2;
+            document.getElementById("goal3").value = message.goal3;
+        }
+        alert(data.message);        
     }
 
     async function logout() {
