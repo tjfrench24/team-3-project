@@ -1,5 +1,5 @@
 import { navigate } from "./scripts/navigation.js";
-import { addWorkoutForSelectedDay, buildCalendar } from "./scripts/calendar.js";
+import { addTodayWorkout, buildCalendar } from "./scripts/calendar.js";
 import { initializeWorkouts, toggleComplete } from "./scripts/workout.js";
 import { initHomeView } from "./home.js";
 
