@@ -24,3 +24,12 @@
 ## November 17, 2024
 - Task: Feature Diagram, roles and report
 - Details: Created a feature diagram for the project, added all the features that I created in our project and how they are connected to each other. Added my roles and report for the project.
+
+## December 10, 2024
+- Orchestrated meeting with team members to discuss the final project submission and ensure that all tasks were completed and that the project was ready for submission.
+- Worked on fixed a huge amount of bugs and issues in the project to make sure the project is ready for submission.
+- Had to fix a lot of issues with the backend and frontend integration
+
+## December 11, 2024
+- Still kept working on fixing the bugs and issues in the project.
+- Made sure everyone was ready for submission
