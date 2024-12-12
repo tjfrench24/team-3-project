@@ -1,8 +1,7 @@
 import { navigate } from "./scripts/navigation.js";
-import { buildCalendar } from "./scripts/calendar.js";
+import { addTodayWorkout, buildCalendar } from "./scripts/calendar.js";
 import { initializeWorkouts, toggleComplete } from "./scripts/workout.js";
 import { initHomeView } from "./home.js";
-import { addTodayWorkout } from "./scripts/calendar.js";
 
 let currentDate = new Date();
 
@@ -93,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.toggleComplete = toggleComplete;
-    addTodayWorkout()
+    addWorkoutForSelectedDay();
     navigate("loginView");
 
 

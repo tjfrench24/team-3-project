@@ -1,4 +1,7 @@
+import { workouts, initializeWorkouts } from "./workout.js";
+
 // Array containing the names of the months
+
 const monthNames = [
   "January",
   "February",
