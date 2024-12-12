@@ -92,7 +92,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     window.toggleComplete = toggleComplete;
-    addWorkoutForSelectedDay();
+    initializeWorkouts();
+    addTodayWorkout();
+    buildCalendar(currentDate);
     navigate("loginView");
 
 

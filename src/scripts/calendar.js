@@ -1,4 +1,4 @@
-import { workouts, initializeWorkouts } from "./workout.js";
+import { initializeWorkouts } from "./workout.js";
 
 // Array containing the names of the months
 
