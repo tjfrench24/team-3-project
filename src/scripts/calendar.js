@@ -1,74 +1,75 @@
 import { workouts, initializeWorkouts } from "./workout.js";
+
+// Array containing the names of the months
+
 const monthNames = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+// Function to build the calendar grid based on the given date
+export function buildCalendar(date) {
+  const numCols = 7,  // Number of columns (days of the week)
+        numRows = 5,  // Number of rows (weeks in a month)
+        theGrid = document.getElementById("theGrid");
+  const monthYearDisplay = document.getElementById("monthYearDisplay");
+  const month = date.getMonth();
+  const year = date.getFullYear();
   
-  export function buildCalendar(date) {
-    const numCols = 7,
-      numRows = 5,
-      theGrid = document.getElementById("theGrid");
-    const monthYearDisplay = document.getElementById("monthYearDisplay");
-    const month = date.getMonth();
-    const year = date.getFullYear();
-    monthYearDisplay.textContent = `${monthNames[month]} ${year}`;
-  
-    while (theGrid.firstChild) {
+  // Display the current month and year
+  monthYearDisplay.textContent = `${monthNames[month]} ${year}`;
+
+  // Remove any existing children from the grid
+  while (theGrid.firstChild) {
       theGrid.removeChild(theGrid.firstChild);
-    }
-  
-    const firstDay = new Date(year, month, 1).getDay();
-    const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const totalCells = numCols * numRows;
-  
-    for (let i = 0; i < firstDay; i++) {
+  }
+
+  // Determine the first day of the month and the number of days in the month
+  const firstDay = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const totalCells = numCols * numRows;
+
+  // Add empty squares for the days before the first day of the month
+  for (let i = 0; i < firstDay; i++) {
       const emptySquare = document.createElement("div");
       emptySquare.classList.add("grid-item");
       theGrid.appendChild(emptySquare);
-    }
-  
-    for (let day = 1; day <= daysInMonth; day++) {
+  }
+
+  // Add squares for each day of the month
+  for (let day = 1; day <= daysInMonth; day++) {
       const square = document.createElement("div");
       square.textContent = day;
-      square.classList.add("grid-item", "white");
+      square.classList.add("grid-item", "white");  // Add classes for styling
       theGrid.appendChild(square);
-    }
-  
-    const remainingCells = totalCells - firstDay - daysInMonth;
-    for (let i = 0; i < remainingCells; i++) {
+  }
+
+  // Add empty squares to fill the rest of the grid
+  const remainingCells = totalCells - firstDay - daysInMonth;
+  for (let i = 0; i < remainingCells; i++) {
       const emptySquare = document.createElement("div");
       emptySquare.classList.add("grid-item");
       theGrid.appendChild(emptySquare);
-    }
   }
-  export function addWorkoutForSelectedDay() {
-    const grid = document.getElementById("theGrid");
-    grid.addEventListener("click", (e) => {
-      if (!isNaN(e.target.textContent)) { // Ensure a valid date was clicked
-        const selectedDay = e.target.textContent;
-        const today = new Date();
-        const selectedDate = new Date(today.getFullYear(), today.getMonth(), selectedDay);
-        const formattedDate = selectedDate.toISOString().split("T")[0];
-  
-        // Filter workouts for the selected date
-        const filteredWorkouts = workouts.filter((workout) => workout.date === formattedDate);
-  
-        // Navigate to the workout view regardless of whether workouts exist
-        document.getElementById("calendarView").style.display = "none";
-        document.getElementById("workoutView").style.display = "block";
-  
-        // Pass only filtered workouts to initializeWorkouts
-        initializeWorkouts(filteredWorkouts);
-      }
-    });
-  }
+}
+
+// Function to add an event listener for today's workout
+export function addTodayWorkout() {
+  let grid = document.getElementById("theGrid");
+
+  // Add event listener to the grid to switch views on click
+  grid.addEventListener("click", e => {
+      document.getElementById("calendarView").style.display = 'none';
+      document.getElementById("workoutView").style.display = 'block';
+  });
+}

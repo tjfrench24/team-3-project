@@ -1,43 +1,102 @@
-export const workouts = [
-  { name: "press-up", sets: "4 sets of 12 reps", description: "Maintain standard posture", calories: 120, date: "2024-12-10" },
-  { name: "squat", sets: "4 sets of 12 reps", description: "Feet shoulder width apart", calories: 150, date: "2024-12-15" },
-  { name: "flat support", sets: "4 sets of 30 seconds", description: "Keep your body straight", calories: 80, date: "2024-12-08" },
-];
+// workout.js
+import { workoutData } from './workoutData.js';
 
 let totalCalories = 0;
-//Initialize exercise plan
-export function initializeWorkouts(filteredWorkouts = []) {
-  const workList = document.getElementById("workout-list");
-  workList.innerHTML = ''; // Clear previous workouts
 
-  // Check if there are workouts for the selected date
-  if (filteredWorkouts.length > 0) {
-    filteredWorkouts.forEach((exercise) => {
-      let e = document.createElement("div");
-      e.className = "workout-item";
-      e.innerHTML = `
-        <h3>${exercise.name} (${exercise.calories} calories)</h3>
-        <p>${exercise.sets}</p>
-        <p>${exercise.description}</p>
-        <button onclick="toggleComplete(this, ${exercise.calories})">Finish</button>
-      `;
-      workList.appendChild(e);
-    });
-  } else {
-    workList.innerHTML = "<p>No workouts scheduled for this day.</p>";
+async function saveWorkoutDatabase(data){
+  try{
+    console.log('Sending data',data)
+    let response = await fetch("http://localhost:5000/workouts/save",{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(data)
+    })
+    if(response.ok){
+      alert("success saved to database")
+    }
+    else{
+      throw new Error('Save failed')
+    }
+  }
+  catch(error){
+    console.error('Error',error)
+    alert('Save failed')
   }
 }
 
-export function toggleComplete(button, calories) {
-  let workoutItem = button.parentElement;
-  workoutItem.classList.toggle("completed");
-  if (workoutItem.classList.contains("completed")) {
-    button.textContent = "Not yet";
-    totalCalories = totalCalories+ calories;
-  } else {
-    button.textContent = "Finish";
-    totalCalories = totalCalories- calories;
-  }
-  document.getElementById("calories-count").textContent = totalCalories;
+function showWorkout(planId){
+ let content = document.getElementById('workout-content');
+ content.innerHTML = '';
+ let exercises = workoutData[planId];
+ exercises.forEach(exercise => {
+   let div = document.createElement('div');
+   div.className = 'exercise-item';
+   div.innerHTML = `
+     <h3>${exercise.name} (${exercise.calories} calories)</h3>
+     <p>${exercise.sets}</p>
+     <button onclick="addToSelected('${exercise.name}', '${exercise.sets}', ${exercise.calories})">add</button>
+   `;
+   content.appendChild(div);
+ });
+ initializeWorkouts();
 }
-window.toggleComplete = toggleComplete
+
+function removeFromSelected(button,calories){
+ button.parentElement.remove();
+ totalCalories -= calories;
+ document.getElementById('calories-count').textContent = totalCalories;
+}
+
+function addToSelected(name,sets,calories){
+ let selectedList = document.getElementById('selected-exercises');
+ let exerciseDiv = document.createElement('div');
+ exerciseDiv.className = 'selected-exercise';
+ exerciseDiv.innerHTML = `
+   <h3>${name} (${calories} calories)</h3>
+   <p>${sets}</p>
+   <button onclick="removeFromSelected(this, ${calories})">delete</button>
+ `;
+ selectedList.appendChild(exerciseDiv);
+ totalCalories += calories;
+ document.getElementById('calories-count').textContent = totalCalories;
+}
+
+export function toggleComplete(id) {
+ let menu = document.getElementById(id);
+ menu.classList.toggle("active");
+}
+
+export function initializeWorkouts() {
+ if (!document.getElementById('selected-exercises')) {
+   const selectedList = document.createElement('div');
+   selectedList.id = 'selected-exercises';
+   selectedList.className = 'selected-exercises';
+   document.getElementById('workout-container').appendChild(selectedList);
+ }
+}
+
+function saveWorkout(){
+ let exercisesList = document.getElementById('selected-exercises');
+ let exercises = [];
+ let exerciseItems = exercisesList.getElementsByClassName('selected-exercise');
+ for(let item of exerciseItems){
+   exercises.push({
+     name: item.querySelector('h3').textContent,
+     sets: item.querySelector('p').textContent
+   });
+ }
+ let data = {
+   workout: exercises,
+   weight: document.getElementById('userWeight').value,
+   muscleRate: document.getElementById('muscleRate').value,
+   totalCalories: totalCalories
+ };
+ alert('Save success')
+ saveWorkoutDatabase(data)
+}
+
+window.toggleMenu = toggleComplete;
+window.showWorkout = showWorkout;
+window.addToSelected = addToSelected;
+window.removeFromSelected = removeFromSelected;
+window.saveWorkout = saveWorkout;

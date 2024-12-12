@@ -62,20 +62,26 @@
 - Details: Describe the features that I completed and assigned point values for these features
 - Link: https://github.com/tjfrench24/team-3-project/commit/e7587389d83514db644b48c3955ab617a2c39b1c
 
-## December 3, 2024
+## December 10, 2024
 
 - Task: Create structure for backend of application 
-- Details: Created backend folder. Inside, there are folders for the databse, controllers, models, middleware, routes, and a file for the server. 
-- Link: https://github.com/tjfrench24/team-3-project/commit/69e9cb8a75284b1d6850e72d77c8d5c2660535a0 
+- Details: Made structure for the backend of application similar to class example as it relates to tracking workouts and cardio sessions in the database. 
+- Link: https://github.com/tjfrench24/team-3-project/commit/8ede28f6688c800d8ea1fea2bb2a715ba3c2becb 
 
-## December 3, 2024
+## December 10, 2024
 
-- Task: Implement backend for weight-liftng tracker 
-- Details: Implemented entire backend for weight-lifting tracker. Through this task, I also created the database for the backend of the application. Files that were created or changed are workoutController.js, sequelize.js, requestValidation.js, workouts.js, workoutRoutes.js, and server.js. 
-- Link: https://github.com/tjfrench24/team-3-project/commit/69e9cb8a75284b1d6850e72d77c8d5c2660535a0
+- Task: Code for backend of application. 
+- Details: Modified almost all files in the backend and made it like the class structure. Initialized the database, set up the cardio tracker, workout tracker, set up routes, among other things. 
+- Link: https://github.com/tjfrench24/team-3-project/commit/8ede28f6688c800d8ea1fea2bb2a715ba3c2becb 
 
-## December 4, 2024
+## December 10, 2024
 
-- Task: Add weight attribute to weight-lifting tracker. 
-- Details: Added weight attribute to weight-lifting tracker to measure progress in weight for specific exercises. Files changed are workouts.js, workoutController.js, and requestValidation.js.
-- Link: https://github.com/tjfrench24/team-3-project/commit/283db085471d369cf868b2f02a59bd0122f1adfe
+- Task: Comment code for backend of application  
+- Details: Made comments on backend code for the previous reported commit above this one. This is for readability and understandability. 
+- Link:  https://github.com/tjfrench24/team-3-project/commit/754ba58c3614b6327dd70ae89b5a75fa1204ae9e 
+
+## December 10, 2024
+
+- Task: Update readme.md file with running instructions.  
+- Details: put running instructions in the readme.md file so that instructors can run the application. 
+- Link: https://github.com/tjfrench24/team-3-project/commit/0d9dd60e277cde7be759e232eb510934030a08ba 

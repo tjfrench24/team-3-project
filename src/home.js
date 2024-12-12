@@ -89,16 +89,6 @@ export function initHomeView() {
           </ul>
         </div>
       </div>
-
-      <div class="section-card">
-        <h2>Quick Actions</h2>
-        <div class="quick-actions">
-          <button class="action-button" onclick="window.location.href='#workout'">Start Workout</button>
-          <button class="action-button" onclick="navigate('calendarView', new Date(), window.buildCalendar)">View Schedule</button>
-          <button class="action-button" onclick="navigate('graphView')">Check Progress</button>
-        </div>
-      </div>
-    </div>
   `;
 }
 

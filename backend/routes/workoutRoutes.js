@@ -1,30 +1,33 @@
-// handle HTTP requests with express package 
-//const express = require('express');
-import { validateDeleteWorkout, validateLogWorkout } from '../middleware/workoutValidation.js';
-import { getAllWorkouts, deleteWorkout, getWorkoutSummary, logWorkout } from '../controllers/workoutController.js';
 import express from 'express';
-// import workoutController 
-//const workoutController = require('../controllers/workoutController');  
-import workoutController from '../controllers/workoutController.js';
-// import middleware for validation 
-//const workoutValidation = require('../middleware/workoutValidation');  
-import workoutValidation from '../middleware/workoutValidation.js';
+import WorkoutController from '../controllers/workoutController.js'; 
 
-// create router to handle route requests 
-const router = express.Router();
+class WorkoutRoutes {
+  constructor() {
+    this.router = express.Router(); 
+    this.initializeRoutes(); 
+  }
 
-// POST route to create a new workout and add to the database 
-router.post('/', validateLogWorkout, logWorkout);
+  initializeRoutes() {
+    // get route to get all workouts 
+    this.router.get("/workouts", async (req, res) => {
+      await WorkoutController.getAllWorkouts(req, res);
+    });
 
-// GET route to get all workouts from the database 
-router.get('/', getAllWorkouts);
+    // post route to add a workout 
+    this.router.post("/workout", async (req, res) => {
+      await WorkoutController.addWorkout(req, res);
+    });
+ 
+    // delete route to clear all workouts 
+    this.router.delete("/workouts", async (req, res) => {
+      await WorkoutController.clearWorkouts(req, res);
+    });
+  }
 
-// DELETE route to remove a workout from the database by its id. 
-router.delete('/:id', validateDeleteWorkout, deleteWorkout);
+  getRouter() {
+    return this.router;
+  }
+}
 
-// GET route to get workout lifetime total sets and reps of each workout
-router.get('/summary', getWorkoutSummary);
+export default new WorkoutRoutes().getRouter();
 
-// export the router 
-// module.exports = router;
-export default router;  
