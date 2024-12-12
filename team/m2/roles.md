@@ -56,6 +56,11 @@ Top 3 Commits for Milestone 3:
 - Commit 2: Created the home page and added all the necessary components to the home page such as workout stats, progress, upcoming workouts, and achievements. https://github.com/tjfrench24/team-3-project/commit/41b453ceb0b9ba86008c2976a8116d496bcefcca
 - Commit 3: Created a feature diagram for the project, added all the features that I created in our project and how they are connected to each other. https://github.com/tjfrench24/team-3-project/commit/87e01a4702f8ba8b39087d08273476b2773a4d0d
 
+Top 3 Commits for Milestone 4:
+- Commit 1: Implemented the calendar to show all dates and workouts so that core function of our website works.
+https://github.com/tjfrench24/team-3-project/commit/40a66e001e9a3d70b9570d25a640bfd6c7c9d342
+- Commit 2: Fixed small but major issues in terms of functionality to ensure the website works correctly such as correct import statments, correct heirarchy of files being imported, and correct file paths. Fixed differentiation between the front end and back end of the website. https://github.com/tjfrench24/team-3-project/commit/45255d75775eb0f3bfcab2d2cd5e04c88048e486
+
 ## Megan Greene - Notetaker
 - Role: Responsible for taking notes during meetings and making sure anyone who wasn't available knows everything that was discussed. Responsible with communicating with the group about anything they missed. 
 

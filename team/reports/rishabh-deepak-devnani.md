@@ -27,9 +27,10 @@
 
 ## December 10, 2024
 - Orchestrated meeting with team members to discuss the final project submission and ensure that all tasks were completed and that the project was ready for submission.
-- Worked on fixed a huge amount of bugs and issues in the project to make sure the project is ready for submission.
+- Worked on fixed a huge amount of bugs and issues in the project in every team members code to make sure the project is ready for submission.
 - Had to fix a lot of issues with the backend and frontend integration
 
 ## December 11, 2024
 - Still kept working on fixing the bugs and issues in the project.
 - Made sure everyone was ready for submission
+- Made sure demo video was made and added to github
